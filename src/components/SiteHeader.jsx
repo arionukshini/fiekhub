@@ -1,5 +1,7 @@
-import { Link, NavLink } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { useAuth } from '../hooks/useAuth.js'
+import logo from '../assets/logo2.png'
+import TubelightNav from './TubelightNav.jsx'
 
 function SiteHeader() {
   const { session, signOut } = useAuth()
@@ -7,27 +9,11 @@ function SiteHeader() {
   return (
     <header className="site-header">
       <Link className="brand" to="/" aria-label="FIEK Hub home">
-        <span className="brand-mark" aria-hidden="true">
-          FH
-        </span>
+        <img className="brand-logo" src={logo} alt="" aria-hidden="true" />
         <span>FIEK Hub</span>
       </Link>
 
-      <nav className="header-nav" aria-label="Primary navigation">
-        {session ? (
-          <>
-            <NavLink to="/dashboard">Dashboard</NavLink>
-            <button className="nav-button" type="button" onClick={signOut}>
-              Sign out
-            </button>
-          </>
-        ) : (
-          <>
-            <NavLink to="/login">Login</NavLink>
-            <NavLink to="/register">Register</NavLink>
-          </>
-        )}
-      </nav>
+      <TubelightNav isSignedIn={Boolean(session)} onSignOut={signOut} />
     </header>
   )
 }
