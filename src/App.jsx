@@ -1,30 +1,26 @@
-import SiteHeader from './components/SiteHeader.jsx'
+import { Navigate, Route, Routes } from 'react-router-dom'
+import ProtectedRoute from './components/ProtectedRoute.jsx'
+import DashboardPage from './pages/DashboardPage.jsx'
+import LandingPage from './pages/LandingPage.jsx'
+import LoginPage from './pages/LoginPage.jsx'
+import RegisterPage from './pages/RegisterPage.jsx'
 
 function App() {
   return (
-    <div id="top" className="app-shell">
-      <SiteHeader />
-
-      <main className="landing">
-        <section className="hero-section" aria-labelledby="hero-title">
-          <p className="eyebrow">Universiteti i Prishtines</p>
-          <h1 id="hero-title">FIEK Hub</h1>
-          <p className="hero-copy">
-            Platforme e thjeshte per studentet e FIEK-ut, me fokus fillestar
-            ne informacione te verifikuara per IKS.
-          </p>
-
-          <div className="hero-actions" aria-label="Veprimet kryesore">
-            <a className="button button-primary" href="#login">
-              Login
-            </a>
-            <a className="button button-secondary" href="#register">
-              Register
-            </a>
-          </div>
-        </section>
-      </main>
-    </div>
+    <Routes>
+      <Route path="/" element={<LandingPage />} />
+      <Route path="/login" element={<LoginPage />} />
+      <Route path="/register" element={<RegisterPage />} />
+      <Route
+        path="/dashboard"
+        element={
+          <ProtectedRoute>
+            <DashboardPage />
+          </ProtectedRoute>
+        }
+      />
+      <Route path="*" element={<Navigate to="/" replace />} />
+    </Routes>
   )
 }
 

@@ -1,16 +1,32 @@
+import { Link, NavLink } from 'react-router-dom'
+import { useAuth } from '../hooks/useAuth.js'
+
 function SiteHeader() {
+  const { session, signOut } = useAuth()
+
   return (
     <header className="site-header">
-      <a className="brand" href="#top" aria-label="FIEK Hub home">
+      <Link className="brand" to="/" aria-label="FIEK Hub home">
         <span className="brand-mark" aria-hidden="true">
           FH
         </span>
         <span>FIEK Hub</span>
-      </a>
+      </Link>
 
       <nav className="header-nav" aria-label="Primary navigation">
-        <a href="#login">Login</a>
-        <a href="#register">Register</a>
+        {session ? (
+          <>
+            <NavLink to="/dashboard">Dashboard</NavLink>
+            <button className="nav-button" type="button" onClick={signOut}>
+              Sign out
+            </button>
+          </>
+        ) : (
+          <>
+            <NavLink to="/login">Login</NavLink>
+            <NavLink to="/register">Register</NavLink>
+          </>
+        )}
       </nav>
     </header>
   )
