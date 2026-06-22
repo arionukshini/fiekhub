@@ -1,0 +1,42 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 1062 1040"
+  role="img"
+  aria-labelledby="fiekhubBooksTitle"
+>
+  <title id="fiekhubBooksTitle">Three books</title>
+
+  <!-- Transparent background. The books inherit the CSS `color` value. -->
+  <rect
+    class="book book-left"
+    x="0"
+    y="11"
+    width="362"
+    height="1016"
+    rx="16"
+    fill="currentColor"
+    opacity="0.92"
+  />
+
+  <rect
+    class="book book-middle"
+    x="362"
+    y="11"
+    width="310"
+    height="1016"
+    rx="16"
+    fill="currentColor"
+    opacity="0.70"
+  />
+
+  <rect
+    class="book book-right"
+    x="728.5"
+    y="11.5"
+    width="260"
+    height="1015"
+    rx="16"
+    fill="currentColor"
+    transform="rotate(-8.5 858.5 519)"
+  />
+</svg>

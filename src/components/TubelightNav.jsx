@@ -22,9 +22,16 @@ function TubelightNav({ isSignedIn, onSignOut }) {
       ]
 
   const isCurrentRoute = (url) => location.pathname === url
+  const resetScrollBeforeRouteChange = () => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
+  }
 
   return (
-    <nav className="tubelight-nav" aria-label="Primary navigation">
+    <motion.nav
+      className="tubelight-nav"
+      aria-label="Primary navigation"
+      layoutRoot
+    >
       <div className="tubelight-list">
         {items.map((item) => {
           const Icon = item.icon
@@ -34,6 +41,7 @@ function TubelightNav({ isSignedIn, onSignOut }) {
             <Link
               className={`tubelight-item${isActive ? ' active' : ''}`}
               key={item.name}
+              onPointerDown={resetScrollBeforeRouteChange}
               to={item.url}
             >
               {isActive && (
@@ -77,7 +85,7 @@ function TubelightNav({ isSignedIn, onSignOut }) {
           </button>
         )}
       </div>
-    </nav>
+    </motion.nav>
   )
 }
 
