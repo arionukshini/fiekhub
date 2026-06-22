@@ -1,23 +1,19 @@
 import { useMemo, useState } from 'react'
-import { FileText } from 'lucide-react'
+import { Download, ExternalLink, FileText } from 'lucide-react'
 import SiteHeader from '../components/SiteHeader.jsx'
 import { acceptanceExamYears } from '../data/acceptanceExams.js'
 
 function AcceptanceExamsPage() {
   const [selectedYear, setSelectedYear] = useState(acceptanceExamYears[0].year)
-  const [selectedFile, setSelectedFile] = useState(
-    acceptanceExamYears[0].files[0],
-  )
 
   const activeYear = useMemo(
-    () => acceptanceExamYears.find((group) => group.year === selectedYear),
+    () =>
+      acceptanceExamYears.find((group) => group.year === selectedYear) ??
+      acceptanceExamYears[0],
     [selectedYear],
   )
 
-  function handleYearSelect(yearGroup) {
-    setSelectedYear(yearGroup.year)
-    setSelectedFile(yearGroup.files[0] ?? null)
-  }
+  const selectedDocument = activeYear?.document
 
   return (
     <div className="app-shell">
@@ -28,8 +24,8 @@ function AcceptanceExamsPage() {
           <p className="eyebrow">Provime pranuese</p>
           <h1 id="materials-title">Provime Pranuese FIEK</h1>
           <p>
-            Ketu do te organizohen provimet pranuese sipas viteve. Per momentin
-            struktura eshte gati; PDF-at mund te shtohen me vone.
+            Zgjedh vitin dhe hap PDF-at e provimeve pranuese direkt brenda
+            faqes. Kjo zone eshte e disponueshme vetem pasi te kycesh.
           </p>
         </section>
 
@@ -43,10 +39,11 @@ function AcceptanceExamsPage() {
                     yearGroup.year === selectedYear ? ' active' : ''
                   }`}
                   key={yearGroup.year}
-                  onClick={() => handleYearSelect(yearGroup)}
+                  onClick={() => setSelectedYear(yearGroup.year)}
                   type="button"
                 >
-                  {yearGroup.year}
+                  <span>{yearGroup.year}</span>
+                  <small>PDF</small>
                 </button>
               ))}
             </div>
@@ -61,39 +58,49 @@ function AcceptanceExamsPage() {
               <p>{activeYear.description}</p>
             </div>
 
-            <div className="file-picker" aria-label="Dokumentet e vitit">
-              {activeYear.files.map((file) => (
-                <button
-                  aria-label={file.title}
-                  className={`file-tile${
-                    selectedFile?.fileName === file.fileName ? ' active' : ''
-                  }`}
-                  key={file.fileName}
-                  onClick={() => setSelectedFile(file)}
-                  type="button"
-                >
-                  {file.label}
-                </button>
-              ))}
-            </div>
-
-            <div className="pdf-viewer" aria-live="polite">
-              {selectedFile?.available ? (
-                <iframe
-                  src={selectedFile.url}
-                  title={selectedFile.title}
-                />
-              ) : (
-                <div className="pdf-empty-state">
-                  <FileText aria-hidden="true" size={38} />
-                  <h3>{selectedFile?.title ?? 'Zgjedh nje dokument'}</h3>
-                  <p>
-                    PDF-i nuk eshte ngarkuar ende. Kur ta shtosh ne folderin
-                    publik, ky panel do ta shfaqe direkt brenda faqes.
-                  </p>
-                  {selectedFile && <code>{selectedFile.url}</code>}
+            <div className="pdf-viewer-shell">
+              <div className="pdf-toolbar">
+                <div>
+                  <span className="pdf-kicker">{activeYear.year}</span>
+                  <h3>{selectedDocument?.title ?? 'Zgjedh nje vit'}</h3>
                 </div>
-              )}
+
+                {selectedDocument?.available && (
+                  <div className="pdf-actions">
+                    <a
+                      href={selectedDocument.url}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <ExternalLink aria-hidden="true" size={17} />
+                      Open
+                    </a>
+                    <a href={selectedDocument.url} download>
+                      <Download aria-hidden="true" size={17} />
+                      Download
+                    </a>
+                  </div>
+                )}
+              </div>
+
+              <div className="pdf-viewer" aria-live="polite">
+                {selectedDocument?.available ? (
+                  <iframe
+                    src={selectedDocument.url}
+                    title={selectedDocument.title}
+                  />
+                ) : (
+                  <div className="pdf-empty-state">
+                    <FileText aria-hidden="true" size={38} />
+                    <h3>{selectedDocument?.title ?? 'Zgjedh nje vit'}</h3>
+                    <p>
+                      PDF-i nuk eshte ngarkuar ende. Kur ta shtosh ne folderin
+                      publik, ky panel do ta shfaqe direkt brenda faqes.
+                    </p>
+                    {selectedDocument && <code>{selectedDocument.url}</code>}
+                  </div>
+                )}
+              </div>
             </div>
           </section>
         </section>

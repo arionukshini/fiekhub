@@ -19,7 +19,6 @@ function TubelightNav({ isSignedIn, onSignOut }) {
       ]
     : [
         { name: 'Home', url: '/', icon: Home },
-        { name: 'Provime Pranuese', url: '/provime-pranuese', icon: NotebookTabs },
         { name: 'Login', url: '/login', icon: LogIn },
         { name: 'Register', url: '/register', icon: UserPlus },
       ]
