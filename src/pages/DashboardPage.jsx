@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import SiteHeader from '../components/SiteHeader.jsx'
 import { useAuth } from '../hooks/useAuth.js'
 
@@ -29,8 +30,11 @@ function DashboardPage() {
 
           <article className="dashboard-card">
             <span className="card-label">Materials</span>
-            <h2>Course files</h2>
-            <p>PDFs, presentations, and other files will live here later.</p>
+            <h2>Provime pranuese</h2>
+            <p>Shiko PDF-at e provimeve pranuese te organizuara sipas viteve.</p>
+            <Link className="dashboard-card-link" to="/provime-pranuese">
+              Open section
+            </Link>
           </article>
 
           <article className="dashboard-card">

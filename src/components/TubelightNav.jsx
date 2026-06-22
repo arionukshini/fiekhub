@@ -3,6 +3,7 @@ import {
   LayoutDashboard,
   LogIn,
   LogOut,
+  NotebookTabs,
   UserPlus,
 } from 'lucide-react'
 import { motion } from 'framer-motion'
@@ -13,10 +14,12 @@ function TubelightNav({ isSignedIn, onSignOut }) {
   const items = isSignedIn
     ? [
         { name: 'Home', url: '/', icon: Home },
+        { name: 'Provime Pranuese', url: '/provime-pranuese', icon: NotebookTabs },
         { name: 'Dashboard', url: '/dashboard', icon: LayoutDashboard },
       ]
     : [
         { name: 'Home', url: '/', icon: Home },
+        { name: 'Provime Pranuese', url: '/provime-pranuese', icon: NotebookTabs },
         { name: 'Login', url: '/login', icon: LogIn },
         { name: 'Register', url: '/register', icon: UserPlus },
       ]

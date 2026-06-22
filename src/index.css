@@ -859,6 +859,205 @@ h1 {
   line-height: 1.6;
 }
 
+.dashboard-card-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 38px;
+  margin-top: 18px;
+  border-radius: 8px;
+  padding: 0 14px;
+  color: #fffdf9;
+  background: var(--color-primary);
+  font-weight: 800;
+}
+
+.dashboard-card-link:hover {
+  background: var(--color-primary-dark);
+}
+
+.materials-page {
+  width: min(1120px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 64px 0 110px;
+}
+
+.materials-hero {
+  max-width: 780px;
+  padding: 44px 0 36px;
+}
+
+.materials-hero h1 {
+  font-size: clamp(2.3rem, 6vw, 4.7rem);
+}
+
+.materials-hero p:last-child {
+  max-width: 680px;
+  margin: 22px 0 0;
+  color: var(--color-muted);
+  font-size: 1.08rem;
+  line-height: 1.7;
+}
+
+.materials-layout {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr);
+  gap: 22px;
+  align-items: start;
+}
+
+.materials-sidebar,
+.materials-files {
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--color-surface) 92%, transparent);
+  box-shadow: var(--shadow-soft);
+}
+
+.materials-sidebar {
+  position: sticky;
+  top: 104px;
+  padding: 18px;
+}
+
+.materials-sidebar h2,
+.materials-section-header h2 {
+  margin: 0;
+  color: var(--color-primary-dark);
+  font-size: 1.2rem;
+}
+
+.year-list {
+  display: grid;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.year-button,
+.file-button {
+  border: 1px solid transparent;
+  color: var(--color-muted);
+  background: transparent;
+  text-align: left;
+}
+
+.year-button {
+  min-height: 42px;
+  border-radius: 8px;
+  padding: 0 14px;
+  font-weight: 800;
+}
+
+.year-button:hover,
+.year-button.active {
+  color: var(--color-primary-dark);
+  border-color: color-mix(in srgb, var(--color-primary) 18%, transparent);
+  background: var(--color-primary-soft);
+}
+
+.materials-files {
+  min-width: 0;
+  padding: 22px;
+}
+
+.materials-section-header {
+  display: flex;
+  gap: 18px;
+  align-items: end;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 18px;
+}
+
+.materials-section-header p:last-child {
+  max-width: 420px;
+  margin: 0;
+  color: var(--color-muted);
+  line-height: 1.55;
+}
+
+.file-picker {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.file-tile {
+  display: grid;
+  width: 54px;
+  height: 54px;
+  place-items: center;
+  border-color: var(--color-border);
+  border-radius: 8px;
+  color: var(--color-muted);
+  background: color-mix(in srgb, var(--color-surface) 82%, transparent);
+  font-size: 1rem;
+  font-weight: 850;
+  text-align: center;
+}
+
+.file-tile:hover,
+.file-tile.active {
+  color: var(--color-primary-dark);
+  border-color: color-mix(in srgb, var(--color-primary) 28%, transparent);
+  background: var(--color-primary-soft);
+}
+
+.file-tile.active {
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--color-primary) 22%, transparent);
+}
+
+.pdf-viewer {
+  min-height: 560px;
+  margin-top: 18px;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--color-page) 72%, var(--color-surface));
+}
+
+.pdf-viewer iframe {
+  display: block;
+  width: 100%;
+  height: 720px;
+  border: 0;
+}
+
+.pdf-empty-state {
+  display: grid;
+  min-height: 560px;
+  place-items: center;
+  padding: 34px;
+  color: var(--color-muted);
+  text-align: center;
+}
+
+.pdf-empty-state svg {
+  color: var(--color-primary);
+}
+
+.pdf-empty-state h3 {
+  margin: 14px 0 0;
+  color: var(--color-primary-dark);
+  font-size: 1.3rem;
+}
+
+.pdf-empty-state p {
+  max-width: 480px;
+  margin: 10px auto 0;
+  line-height: 1.65;
+}
+
+.pdf-empty-state code {
+  max-width: 100%;
+  margin-top: 16px;
+  overflow-wrap: anywhere;
+  border-radius: 8px;
+  padding: 8px 10px;
+  color: var(--color-primary-dark);
+  background: var(--color-primary-soft);
+}
+
 .tubelight-nav {
   position: fixed;
   top: 22px;
@@ -1043,6 +1242,37 @@ h1 {
 
   .dashboard-grid {
     grid-template-columns: 1fr;
+  }
+
+  .materials-page {
+    padding: 42px 0 120px;
+  }
+
+  .materials-layout,
+  .materials-section-header {
+    grid-template-columns: 1fr;
+    display: grid;
+  }
+
+  .materials-sidebar {
+    position: static;
+  }
+
+  .year-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .year-button {
+    text-align: center;
+  }
+
+  .materials-files {
+    padding: 18px;
+  }
+
+  .pdf-viewer,
+  .pdf-empty-state {
+    min-height: 430px;
   }
 
   .tubelight-item {
