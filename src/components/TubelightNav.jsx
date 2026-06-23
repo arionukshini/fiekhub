@@ -2,20 +2,21 @@ import {
   Home,
   LayoutDashboard,
   LogIn,
-  LogOut,
   NotebookTabs,
+  UserCircle,
   UserPlus,
 } from 'lucide-react'
 import { motion } from 'framer-motion'
 import { Link, useLocation } from 'react-router-dom'
 
-function TubelightNav({ isSignedIn, onSignOut }) {
+function TubelightNav({ isSignedIn }) {
   const location = useLocation()
   const items = isSignedIn
     ? [
         { name: 'Home', url: '/', icon: Home },
         { name: 'Provime Pranuese', url: '/provime-pranuese', icon: NotebookTabs },
         { name: 'Dashboard', url: '/dashboard', icon: LayoutDashboard },
+        { name: 'Account', url: '/account', icon: UserCircle },
       ]
     : [
         { name: 'Home', url: '/', icon: Home },
@@ -23,7 +24,11 @@ function TubelightNav({ isSignedIn, onSignOut }) {
         { name: 'Register', url: '/register', icon: UserPlus },
       ]
 
-  const isCurrentRoute = (url) => location.pathname === url
+  const activePath =
+    !isSignedIn && location.pathname === '/forgot-password'
+      ? '/login'
+      : location.pathname
+  const isCurrentRoute = (url) => activePath === url
   const resetScrollBeforeRouteChange = () => {
     window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
   }
@@ -68,14 +73,6 @@ function TubelightNav({ isSignedIn, onSignOut }) {
           )
         })}
 
-        {isSignedIn && (
-          <button className="tubelight-item" onClick={onSignOut} type="button">
-            <span className="tubelight-content">
-              <LogOut aria-hidden="true" size={18} strokeWidth={2.35} />
-              <span className="tubelight-label">Sign out</span>
-            </span>
-          </button>
-        )}
       </div>
     </nav>
   )

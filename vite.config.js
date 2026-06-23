@@ -5,4 +5,7 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   base: '/fiekhub/',
   plugins: [react()],
+  server: {
+    allowedHosts: ['shaggy-rabbits-rest.loca.lt'],
+  },
 })

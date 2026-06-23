@@ -82,7 +82,12 @@ function LoginPage() {
             </div>
 
             <div className="auth-field">
-              <label htmlFor="login-password">Password</label>
+              <div className="auth-label-row">
+                <label htmlFor="login-password">Password</label>
+                <Link className="auth-inline-link" to="/forgot-password">
+                  Forgot password?
+                </Link>
+              </div>
               <div className="auth-input-shell">
                 <Lock aria-hidden="true" size={18} />
                 <input

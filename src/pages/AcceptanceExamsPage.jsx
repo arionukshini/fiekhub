@@ -1,6 +1,7 @@
 import { useMemo, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { Download, ExternalLink, FileText } from 'lucide-react'
+import PdfCanvasViewer from '../components/PdfCanvasViewer.jsx'
 import { acceptanceExamYears } from '../data/acceptanceExams.js'
 import {
   interactiveRevealItem,
@@ -137,9 +138,9 @@ function AcceptanceExamsPage() {
                     transition={{ duration: 0.3, ease: smoothEase }}
                   >
                     {selectedDocument?.available ? (
-                      <iframe
-                        src={selectedDocument.url}
+                      <PdfCanvasViewer
                         title={selectedDocument.title}
+                        url={selectedDocument.url}
                       />
                     ) : (
                       <div className="pdf-empty-state">

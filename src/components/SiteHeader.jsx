@@ -4,7 +4,7 @@ import FiekHubBooksLogo from './FiekHubBooksLogo.jsx'
 import TubelightNav from './TubelightNav.jsx'
 
 function SiteHeader() {
-  const { session, signOut } = useAuth()
+  const { session } = useAuth()
 
   return (
     <header className="site-header">
@@ -15,7 +15,7 @@ function SiteHeader() {
         <span>FIEK Hub</span>
       </Link>
 
-      <TubelightNav isSignedIn={Boolean(session)} onSignOut={signOut} />
+      <TubelightNav isSignedIn={Boolean(session)} />
     </header>
   )
 }
