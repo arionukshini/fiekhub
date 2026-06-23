@@ -3,7 +3,6 @@ import { AnimatePresence, motion } from 'framer-motion'
 import { ArrowRight, Eye, EyeOff, Lock, Mail, User } from 'lucide-react'
 import { Link, Navigate } from 'react-router-dom'
 import AuthCardShell from '../components/AuthCardShell.jsx'
-import SiteHeader from '../components/SiteHeader.jsx'
 import { useAuth } from '../hooks/useAuth.js'
 import { supabase } from '../lib/supabaseClient.js'
 
@@ -63,8 +62,6 @@ function RegisterPage() {
 
   return (
     <div className="app-shell auth-shell">
-      <SiteHeader />
-
       <AuthCardShell
         copy="Create a student account. Administrative roles are not selectable during registration."
         eyebrow="Student registration"

@@ -5,6 +5,7 @@ import {
   useTransform,
 } from 'framer-motion'
 import FiekHubBooksLogo from './FiekHubBooksLogo.jsx'
+import { revealItem, staggerContainer } from '../lib/motion.js'
 
 function AuthCardShell({ children, copy, eyebrow, title, titleId }) {
   const mouseX = useMotionValue(0)
@@ -45,16 +46,29 @@ function AuthCardShell({ children, copy, eyebrow, title, titleId }) {
         <span className="auth-beam auth-beam-bottom" aria-hidden="true" />
         <span className="auth-beam auth-beam-left" aria-hidden="true" />
 
-        <div className="auth-card-header">
-          <div className="auth-logo-frame">
-            <FiekHubBooksLogo className="auth-logo-mark" />
+        <motion.div
+          animate="show"
+          className="auth-card-content"
+          initial="hidden"
+          variants={staggerContainer}
+        >
+          <div className="auth-card-header">
+            <motion.div className="auth-logo-frame" variants={revealItem}>
+              <FiekHubBooksLogo className="auth-logo-mark" />
+            </motion.div>
+            <motion.p className="eyebrow" variants={revealItem}>
+              {eyebrow}
+            </motion.p>
+            <motion.h1 id={titleId} variants={revealItem}>
+              {title}
+            </motion.h1>
+            <motion.p className="auth-copy" variants={revealItem}>
+              {copy}
+            </motion.p>
           </div>
-          <p className="eyebrow">{eyebrow}</p>
-          <h1 id={titleId}>{title}</h1>
-          <p className="auth-copy">{copy}</p>
-        </div>
 
-        {children}
+          <motion.div variants={revealItem}>{children}</motion.div>
+        </motion.div>
       </motion.section>
     </main>
   )

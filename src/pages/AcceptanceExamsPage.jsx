@@ -1,7 +1,14 @@
 import { useMemo, useState } from 'react'
+import { AnimatePresence, motion } from 'framer-motion'
 import { Download, ExternalLink, FileText } from 'lucide-react'
-import SiteHeader from '../components/SiteHeader.jsx'
 import { acceptanceExamYears } from '../data/acceptanceExams.js'
+import {
+  interactiveRevealItem,
+  revealItem,
+  revealViewport,
+  smoothEase,
+  staggerContainer,
+} from '../lib/motion.js'
 
 function AcceptanceExamsPage() {
   const [selectedYear, setSelectedYear] = useState(acceptanceExamYears[0].year)
@@ -17,39 +24,65 @@ function AcceptanceExamsPage() {
 
   return (
     <div className="app-shell">
-      <SiteHeader />
-
       <main className="materials-page">
-        <section className="materials-hero" aria-labelledby="materials-title">
-          <p className="eyebrow">Provime pranuese</p>
-          <h1 id="materials-title">Provime Pranuese FIEK</h1>
-          <p>
+        <motion.section
+          aria-labelledby="materials-title"
+          className="materials-hero"
+          initial="hidden"
+          variants={staggerContainer}
+          viewport={revealViewport}
+          whileInView="show"
+        >
+          <motion.p className="eyebrow" variants={revealItem}>
+            Provime pranuese
+          </motion.p>
+          <motion.h1 id="materials-title" variants={revealItem}>
+            Provime Pranuese FIEK
+          </motion.h1>
+          <motion.p variants={revealItem}>
             Zgjedh vitin dhe hap PDF-at e provimeve pranuese direkt brenda
             faqes. Kjo zone eshte e disponueshme vetem pasi te kycesh.
-          </p>
-        </section>
+          </motion.p>
+        </motion.section>
 
-        <section className="materials-layout" aria-label="Provime pranuese">
-          <aside className="materials-sidebar" aria-label="Vitet">
+        <motion.section
+          aria-label="Provime pranuese"
+          className="materials-layout"
+          initial="hidden"
+          variants={staggerContainer}
+          viewport={revealViewport}
+          whileInView="show"
+        >
+          <motion.aside
+            aria-label="Vitet"
+            className="materials-sidebar"
+            variants={revealItem}
+          >
             <h2>Vitet</h2>
             <div className="year-list">
               {acceptanceExamYears.map((yearGroup) => (
-                <button
+                <motion.button
                   className={`year-button${
                     yearGroup.year === selectedYear ? ' active' : ''
                   }`}
                   key={yearGroup.year}
                   onClick={() => setSelectedYear(yearGroup.year)}
                   type="button"
+                  whileHover={{ x: 3 }}
+                  whileTap={{ scale: 0.985 }}
                 >
                   <span>{yearGroup.year}</span>
                   <small>PDF</small>
-                </button>
+                </motion.button>
               ))}
             </div>
-          </aside>
+          </motion.aside>
 
-          <section className="materials-files" aria-labelledby="year-title">
+          <motion.section
+            aria-labelledby="year-title"
+            className="materials-files"
+            variants={interactiveRevealItem}
+          >
             <div className="materials-section-header">
               <div>
                 <p className="eyebrow">Viti {activeYear.year}</p>
@@ -58,11 +91,21 @@ function AcceptanceExamsPage() {
               <p>{activeYear.description}</p>
             </div>
 
-            <div className="pdf-viewer-shell">
+            <motion.div className="pdf-viewer-shell" layout>
               <div className="pdf-toolbar">
                 <div>
-                  <span className="pdf-kicker">{activeYear.year}</span>
-                  <h3>{selectedDocument?.title ?? 'Zgjedh nje vit'}</h3>
+                  <AnimatePresence mode="wait">
+                    <motion.div
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -8 }}
+                      initial={{ opacity: 0, y: 8 }}
+                      key={activeYear.year}
+                      transition={{ duration: 0.24, ease: smoothEase }}
+                    >
+                      <span className="pdf-kicker">{activeYear.year}</span>
+                      <h3>{selectedDocument?.title ?? 'Zgjedh nje vit'}</h3>
+                    </motion.div>
+                  </AnimatePresence>
                 </div>
 
                 {selectedDocument?.available && (
@@ -84,26 +127,38 @@ function AcceptanceExamsPage() {
               </div>
 
               <div className="pdf-viewer" aria-live="polite">
-                {selectedDocument?.available ? (
-                  <iframe
-                    src={selectedDocument.url}
-                    title={selectedDocument.title}
-                  />
-                ) : (
-                  <div className="pdf-empty-state">
-                    <FileText aria-hidden="true" size={38} />
-                    <h3>{selectedDocument?.title ?? 'Zgjedh nje vit'}</h3>
-                    <p>
-                      PDF-i nuk eshte ngarkuar ende. Kur ta shtosh ne folderin
-                      publik, ky panel do ta shfaqe direkt brenda faqes.
-                    </p>
-                    {selectedDocument && <code>{selectedDocument.url}</code>}
-                  </div>
-                )}
+                <AnimatePresence mode="wait">
+                  <motion.div
+                    animate={{ opacity: 1, y: 0 }}
+                    className="pdf-viewer-transition"
+                    exit={{ opacity: 0, y: -10 }}
+                    initial={{ opacity: 0, y: 12 }}
+                    key={selectedDocument?.fileName ?? activeYear.year}
+                    transition={{ duration: 0.3, ease: smoothEase }}
+                  >
+                    {selectedDocument?.available ? (
+                      <iframe
+                        src={selectedDocument.url}
+                        title={selectedDocument.title}
+                      />
+                    ) : (
+                      <div className="pdf-empty-state">
+                        <FileText aria-hidden="true" size={38} />
+                        <h3>{selectedDocument?.title ?? 'Zgjedh nje vit'}</h3>
+                        <p>
+                          PDF-i nuk eshte ngarkuar ende. Kur ta shtosh ne
+                          folderin publik, ky panel do ta shfaqe direkt brenda
+                          faqes.
+                        </p>
+                        {selectedDocument && <code>{selectedDocument.url}</code>}
+                      </div>
+                    )}
+                  </motion.div>
+                </AnimatePresence>
               </div>
-            </div>
-          </section>
-        </section>
+            </motion.div>
+          </motion.section>
+        </motion.section>
       </main>
     </div>
   )

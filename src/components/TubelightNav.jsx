@@ -29,11 +29,7 @@ function TubelightNav({ isSignedIn, onSignOut }) {
   }
 
   return (
-    <motion.nav
-      className="tubelight-nav"
-      aria-label="Primary navigation"
-      layoutRoot
-    >
+    <nav className="tubelight-nav" aria-label="Primary navigation">
       <div className="tubelight-list">
         {items.map((item) => {
           const Icon = item.icon
@@ -49,22 +45,16 @@ function TubelightNav({ isSignedIn, onSignOut }) {
               {isActive && (
                 <>
                   <motion.span
+                    aria-hidden="true"
                     className="tubelight-active-bg"
                     layoutId="tubelight-active-bg"
-                    transition={{
-                      type: 'spring',
-                      stiffness: 360,
-                      damping: 34,
-                    }}
+                    transition={{ type: 'spring', stiffness: 260, damping: 30 }}
                   />
                   <motion.span
+                    aria-hidden="true"
                     className="tubelight-lamp"
                     layoutId="tubelight-lamp"
-                    transition={{
-                      type: 'spring',
-                      stiffness: 360,
-                      damping: 34,
-                    }}
+                    transition={{ type: 'spring', stiffness: 260, damping: 30 }}
                   >
                     <span className="tubelight-lamp-glow" />
                   </motion.span>
@@ -87,7 +77,7 @@ function TubelightNav({ isSignedIn, onSignOut }) {
           </button>
         )}
       </div>
-    </motion.nav>
+    </nav>
   )
 }
 

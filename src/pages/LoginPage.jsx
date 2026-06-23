@@ -3,7 +3,6 @@ import { AnimatePresence, motion } from 'framer-motion'
 import { ArrowRight, Eye, EyeOff, Lock, Mail } from 'lucide-react'
 import { Link, Navigate, useNavigate } from 'react-router-dom'
 import AuthCardShell from '../components/AuthCardShell.jsx'
-import SiteHeader from '../components/SiteHeader.jsx'
 import { useAuth } from '../hooks/useAuth.js'
 import { supabase } from '../lib/supabaseClient.js'
 
@@ -51,8 +50,6 @@ function LoginPage() {
 
   return (
     <div className="app-shell auth-shell">
-      <SiteHeader />
-
       <AuthCardShell
         copy="Sign in with your student account to reach your FIEK Hub dashboard."
         eyebrow="Student access"
