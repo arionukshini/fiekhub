@@ -20,10 +20,12 @@ import {
   staggerContainer,
 } from '../lib/motion.js'
 import {
-  getGroupsForYear,
+  getGroupsForStudy,
+  getStudyDepartmentLabel,
   getStudyGroupLabel,
   getStudyYearLabel,
   isStudentSetupComplete,
+  studyDepartments,
   studyYears,
 } from '../lib/studentSetup.js'
 import { supabase } from '../lib/supabaseClient.js'
@@ -45,9 +47,15 @@ function AccountPage() {
   const metadata = user?.user_metadata ?? {}
   const [activeSection, setActiveSection] = useState('profile')
   const [fullName, setFullName] = useState(metadata.full_name ?? '')
+  const [studyDepartment, setStudyDepartment] = useState(
+    metadata.study_department ?? '',
+  )
   const [studyYear, setStudyYear] = useState(metadata.study_year ?? '')
   const [studyGroup, setStudyGroup] = useState(() => {
-    const initialGroups = getGroupsForYear(metadata.study_year)
+    const initialGroups = getGroupsForStudy(
+      metadata.study_department,
+      metadata.study_year,
+    )
     return initialGroups.some((group) => group.value === metadata.study_group)
       ? metadata.study_group
       : ''
@@ -61,12 +69,18 @@ function AccountPage() {
   const [error, setError] = useState('')
   const [saving, setSaving] = useState(false)
   const [savingSecurity, setSavingSecurity] = useState(false)
-  const studyGroups = useMemo(() => getGroupsForYear(studyYear), [studyYear])
+  const studyGroups = useMemo(
+    () => getGroupsForStudy(studyDepartment, studyYear),
+    [studyDepartment, studyYear],
+  )
   const displayName = fullName || user?.email || 'Student'
   const setupComplete = isStudentSetupComplete({
     user_metadata: {
       ...metadata,
-      setup_completed: metadata.setup_completed || Boolean(studyYear && studyGroup),
+      setup_completed:
+        metadata.setup_completed ||
+        Boolean(studyDepartment && studyYear && studyGroup),
+      study_department: studyDepartment,
       study_group: studyGroup,
       study_year: studyYear,
     },
@@ -93,11 +107,12 @@ function AccountPage() {
         full_name: fullName.trim(),
         profile_visibility: visibility,
         role: metadata.role ?? 'STUDENT',
-        setup_completed: Boolean(studyYear && studyGroup),
+        setup_completed: Boolean(studyDepartment && studyYear && studyGroup),
         setup_completed_at:
-          studyYear && studyGroup
+          studyDepartment && studyYear && studyGroup
             ? metadata.setup_completed_at ?? new Date().toISOString()
             : null,
+        study_department: studyDepartment,
         study_group: studyGroup,
         study_year: studyYear,
       },
@@ -252,6 +267,14 @@ function AccountPage() {
               <div className="account-stack">
                 <InfoRow label="Role" value={metadata.role ?? 'STUDENT'} />
                 <InfoRow
+                  label="Department"
+                  value={
+                    studyDepartment
+                      ? getStudyDepartmentLabel(studyDepartment)
+                      : 'Not set'
+                  }
+                />
+                <InfoRow
                   label="Year"
                   value={studyYear ? getStudyYearLabel(studyYear) : 'Not set'}
                 />
@@ -338,6 +361,28 @@ function AccountPage() {
               <form className="account-form" onSubmit={saveAccountMetadata}>
                 <div className="account-choice-grid">
                   <div className="auth-field">
+                    <label htmlFor="study-department">Department</label>
+                    <select
+                      className="account-select"
+                      id="study-department"
+                      onChange={(event) => {
+                        setStudyDepartment(event.target.value)
+                        setStudyYear('')
+                        setStudyGroup('')
+                      }}
+                      required
+                      value={studyDepartment}
+                    >
+                      <option value="">Choose department</option>
+                      {studyDepartments.map((department) => (
+                        <option key={department.value} value={department.value}>
+                          {department.label}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+
+                  <div className="auth-field">
                     <label htmlFor="study-year">Year</label>
                     <select
                       className="account-select"
@@ -347,6 +392,7 @@ function AccountPage() {
                         setStudyGroup('')
                       }}
                       required
+                      disabled={!studyDepartment}
                       value={studyYear}
                     >
                       <option value="">Choose year</option>
@@ -365,7 +411,7 @@ function AccountPage() {
                       id="study-group"
                       onChange={(event) => setStudyGroup(event.target.value)}
                       required
-                      disabled={!studyYear}
+                      disabled={!studyDepartment || !studyYear}
                       value={studyGroup}
                     >
                       <option value="">Choose group</option>

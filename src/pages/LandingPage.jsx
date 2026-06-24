@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
+import SiteFooter from '../components/SiteFooter.jsx'
 import { useAuth } from '../hooks/useAuth.js'
 import {
   revealItem,
@@ -74,6 +75,7 @@ function LandingPage() {
             )}
           </motion.div>
         </motion.section>
+        <SiteFooter />
       </main>
     </div>
   )

@@ -1,17 +1,46 @@
 export const studyYears = [
-  { label: 'First year', value: 'first-year', groupCount: 5 },
-  { label: 'Second year', value: 'second-year', groupCount: 3 },
-  { label: 'Third year', value: 'third-year', groupCount: 3 },
-  { label: 'Master', value: 'master', groupCount: 1 },
+  { label: 'First year', value: 'first-year' },
+  { label: 'Second year', value: 'second-year' },
+  { label: 'Third year', value: 'third-year' },
+  { label: 'Master', value: 'master' },
+]
+
+export const studyDepartments = [
+  { label: 'IKS', value: 'iks' },
+  { label: 'EAR', value: 'ear' },
+  { label: 'EEn', value: 'een' },
+  { label: 'TIK', value: 'tik' },
 ]
 
 export function getStudyYearLabel(value) {
   return studyYears.find((year) => year.value === value)?.label ?? value
 }
 
-export function getGroupsForYear(yearValue) {
-  const groupCount =
-    studyYears.find((year) => year.value === yearValue)?.groupCount ?? 0
+export function getStudyDepartmentLabel(value) {
+  return (
+    studyDepartments.find((department) => department.value === value)?.label ??
+    value
+  )
+}
+
+export function getGroupsForStudy(departmentValue, yearValue) {
+  const hasDepartment = studyDepartments.some(
+    (department) => department.value === departmentValue,
+  )
+  const hasYear = studyYears.some((year) => year.value === yearValue)
+
+  if (!hasDepartment || !hasYear) return []
+
+  let groupCount = 1
+
+  if (yearValue === 'first-year') {
+    groupCount = 5
+  } else if (
+    (yearValue === 'second-year' || yearValue === 'third-year') &&
+    (departmentValue === 'iks' || departmentValue === 'ear')
+  ) {
+    groupCount = 3
+  }
 
   return Array.from({ length: groupCount }, (_, index) => ({
     label: `Group ${index + 1}`,
@@ -33,9 +62,10 @@ export function isStudentSetupComplete(user) {
 
   return Boolean(
     metadata.setup_completed &&
+      metadata.study_department &&
       metadata.study_year &&
       metadata.study_group &&
-      getGroupsForYear(metadata.study_year).some(
+      getGroupsForStudy(metadata.study_department, metadata.study_year).some(
         (group) => group.value === metadata.study_group,
       ),
   )
