@@ -6,12 +6,17 @@ import ThemeToggle from './components/ThemeToggle.jsx'
 import { pageVariants } from './lib/motion.js'
 import AcceptanceExamsPage from './pages/AcceptanceExamsPage.jsx'
 import AccountPage from './pages/AccountPage.jsx'
+import AboutPage from './pages/AboutPage.jsx'
+import ContactPage from './pages/ContactPage.jsx'
 import DashboardPage from './pages/DashboardPage.jsx'
+import FaqPage from './pages/FaqPage.jsx'
 import ForgotPasswordPage from './pages/ForgotPasswordPage.jsx'
 import LandingPage from './pages/LandingPage.jsx'
 import LoginPage from './pages/LoginPage.jsx'
+import PrivacyPolicyPage from './pages/PrivacyPolicyPage.jsx'
 import RegisterPage from './pages/RegisterPage.jsx'
 import SetupPage from './pages/SetupPage.jsx'
+import TermsPage from './pages/TermsPage.jsx'
 
 function App() {
   const location = useLocation()
@@ -31,6 +36,11 @@ function App() {
         >
           <Routes location={location}>
             <Route path="/" element={<LandingPage />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/contact" element={<ContactPage />} />
+            <Route path="/privacy" element={<PrivacyPolicyPage />} />
+            <Route path="/terms" element={<TermsPage />} />
+            <Route path="/faq" element={<FaqPage />} />
             <Route
               path="/provime-pranuese"
               element={

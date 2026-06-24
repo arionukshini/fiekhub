@@ -86,7 +86,10 @@ function DashboardPage() {
           >
             <span className="card-label">Profile</span>
             <h2>Student details</h2>
-            <p>Faculty, program, year, and group selection will be added next.</p>
+            <p>
+              Your department, year, and group control the student content
+              shown here.
+            </p>
           </motion.article>
         </motion.section>
       </main>
