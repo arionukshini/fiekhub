@@ -26,7 +26,7 @@ function RegisterPage() {
     setStatus('')
 
     if (!hasSupabaseConfig) {
-      setError('Supabase is not configured yet.')
+      setError('Supabase nuk është konfiguruar ende.')
       return
     }
 
@@ -53,31 +53,31 @@ function RegisterPage() {
     }
 
     if (data.session) {
-      setStatus('Account created. You are signed in now.')
+      setStatus('Llogaria u krijua dhe tani je i kyçur.')
       return
     }
 
-    setStatus('Account created. Check your email to verify your account.')
+    setStatus('Llogaria u krijua. Kontrollo email-in për ta verifikuar.')
   }
 
   return (
     <div className="app-shell auth-shell">
       <AuthCardShell
-        copy="Create a student account. Administrative roles are not selectable during registration."
-        eyebrow="Student registration"
-        title="Register"
+        copy="Krijo llogarinë tënde studentore për të përdorur FIEK Hub."
+        eyebrow="Regjistrimi studentor"
+        title="Regjistrohu"
         titleId="register-title"
       >
           {!hasSupabaseConfig && (
             <p className="alert alert-warning">
-              Supabase environment variables are missing. Add them before using
-              authentication.
+              Mungojnë variablat e Supabase. Shtoji para se të përdorësh
+              autentikimin.
             </p>
           )}
 
           <form className="auth-form" onSubmit={handleSubmit}>
             <div className="auth-field">
-              <label htmlFor="register-full-name">Full name</label>
+              <label htmlFor="register-full-name">Emri i plotë</label>
               <div className="auth-input-shell">
                 <User aria-hidden="true" size={18} />
                 <input
@@ -85,7 +85,7 @@ function RegisterPage() {
                   id="register-full-name"
                   name="fullName"
                   onChange={(event) => setFullName(event.target.value)}
-                  placeholder="Your full name"
+                  placeholder="Emri dhe mbiemri"
                   required
                   type="text"
                   value={fullName}
@@ -111,7 +111,7 @@ function RegisterPage() {
             </div>
 
             <div className="auth-field">
-              <label htmlFor="register-password">Password</label>
+              <label htmlFor="register-password">Fjalëkalimi</label>
               <div className="auth-input-shell">
                 <Lock aria-hidden="true" size={18} />
                 <input
@@ -120,13 +120,13 @@ function RegisterPage() {
                   minLength="8"
                   name="password"
                   onChange={(event) => setPassword(event.target.value)}
-                  placeholder="At least 8 characters"
+                  placeholder="Të paktën 8 karaktere"
                   required
                   type={showPassword ? 'text' : 'password'}
                   value={password}
                 />
                 <button
-                  aria-label={showPassword ? 'Hide password' : 'Show password'}
+                  aria-label={showPassword ? 'Fshih fjalëkalimin' : 'Shfaq fjalëkalimin'}
                   className="password-toggle"
                   onClick={() => setShowPassword((current) => !current)}
                   type="button"
@@ -156,7 +156,7 @@ function RegisterPage() {
                     key="loading"
                   >
                     <span className="auth-spinner" aria-hidden="true" />
-                    Creating account...
+                    Duke krijuar llogarinë...
                   </motion.span>
                 ) : (
                   <motion.span
@@ -166,7 +166,7 @@ function RegisterPage() {
                     initial={{ opacity: 0 }}
                     key="ready"
                   >
-                    Register
+                    Regjistrohu
                     <ArrowRight aria-hidden="true" size={17} />
                   </motion.span>
                 )}
@@ -175,7 +175,7 @@ function RegisterPage() {
           </form>
 
           <p className="auth-switch">
-            Already registered? <Link to="/login">Login</Link>
+            Ke tashmë llogari? <Link to="/login">Kyçu</Link>
           </p>
       </AuthCardShell>
     </div>

@@ -54,7 +54,7 @@ function DashboardPage() {
           <motion.div className="dashboard-primary-action" variants={revealItem}>
             <MotionLink
               className="button button-primary"
-              to="/provime-pranuese"
+              to="/materials"
               variants={subtleScale}
               whileHover="hover"
               whileTap="tap"
@@ -72,15 +72,15 @@ function DashboardPage() {
           >
             <MotionLink
               className="dashboard-shortcut"
-              to="/provime-pranuese"
+              to="/materials"
               variants={subtleScale}
               whileHover="hover"
               whileTap="tap"
             >
               <BookOpen aria-hidden="true" size={20} />
               <span>
-                <strong>Provime pranuese</strong>
-                <small>PDF sipas viteve</small>
+                <strong>Materialet</strong>
+                <small>Lëndët sipas viteve</small>
               </span>
             </MotionLink>
             <MotionLink

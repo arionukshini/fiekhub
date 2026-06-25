@@ -13,15 +13,20 @@ function TubelightNav({ isSignedIn }) {
   const location = useLocation()
   const items = isSignedIn
     ? [
-        { name: 'Home', url: '/', icon: Home },
-        { name: 'Provime Pranuese', url: '/provime-pranuese', icon: NotebookTabs },
-        { name: 'Dashboard', url: '/dashboard', icon: LayoutDashboard },
-        { name: 'Account', url: '/account', icon: UserCircle },
+        { name: 'Ballina', url: '/', icon: Home },
+        { name: 'Paneli', url: '/dashboard', icon: LayoutDashboard },
+        { name: 'Materialet', url: '/materials', icon: NotebookTabs },
+        {
+          name: 'Provimet pranuese',
+          url: '/provime-pranuese',
+          icon: NotebookTabs,
+        },
+        { name: 'Llogaria', url: '/account', icon: UserCircle },
       ]
     : [
-        { name: 'Home', url: '/', icon: Home },
-        { name: 'Login', url: '/login', icon: LogIn },
-        { name: 'Register', url: '/register', icon: UserPlus },
+        { name: 'Ballina', url: '/', icon: Home },
+        { name: 'Kyçu', url: '/login', icon: LogIn },
+        { name: 'Regjistrohu', url: '/register', icon: UserPlus },
       ]
 
   const activePath =

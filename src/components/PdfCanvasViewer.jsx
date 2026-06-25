@@ -7,7 +7,7 @@ pdfjsLib.GlobalWorkerOptions.workerSrc = pdfWorkerUrl
 function PdfCanvasViewer({ title, url }) {
   const viewerRef = useRef(null)
   const renderTaskRef = useRef(null)
-  const [status, setStatus] = useState('Loading PDF...')
+  const [status, setStatus] = useState('Duke ngarkuar PDF-në...')
   const [error, setError] = useState('')
 
   useEffect(() => {
@@ -15,7 +15,7 @@ function PdfCanvasViewer({ title, url }) {
     const abortController = new AbortController()
 
     async function renderPdf() {
-      setStatus('Loading PDF...')
+      setStatus('Duke ngarkuar PDF-në...')
       setError('')
 
       if (renderTaskRef.current) {
@@ -44,7 +44,7 @@ function PdfCanvasViewer({ title, url }) {
           return
         }
 
-        setStatus(`${pdf.numPages} pages`)
+        setStatus(`${pdf.numPages} faqe`)
 
         for (let pageNumber = 1; pageNumber <= pdf.numPages; pageNumber += 1) {
           if (cancelled) break
@@ -87,7 +87,7 @@ function PdfCanvasViewer({ title, url }) {
         if (!cancelled) {
           const detail = import.meta.env.DEV ? ` (${renderError.message})` : ''
           setError(
-            `PDF could not be rendered in the page. Use Open to view it.${detail}`,
+            `PDF-ja nuk mund të shfaqet brenda faqes. Përdor butonin Hap.${detail}`,
           )
           setStatus('')
         }

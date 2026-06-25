@@ -1,0 +1,1658 @@
+{
+  "subject": "Fizika 1",
+  "root": "materials/fiek/viti1/Fizik1",
+  "children": [
+    {
+      "type": "folder",
+      "name": "Ligjeratat",
+      "path": "Ligjeratat",
+      "children": [
+        {
+          "type": "folder",
+          "name": "Ligjerata J1",
+          "path": "Ligjeratat/Ligjerata J1",
+          "children": [
+            {
+              "type": "file",
+              "name": "0. Hyrje- Lënda-Fizika 1.pptx",
+              "path": "Ligjeratat/Ligjerata J1/0. Hyrje- Lënda-Fizika 1.pptx",
+              "extension": "pptx",
+              "size": 80721
+            },
+            {
+              "type": "file",
+              "name": "0.1. Java 1 - Lënda-Fizika 1.pptx",
+              "path": "Ligjeratat/Ligjerata J1/0.1. Java 1 - Lënda-Fizika 1.pptx",
+              "extension": "pptx",
+              "size": 2361263
+            }
+          ]
+        },
+        {
+          "type": "folder",
+          "name": "Ligjerata J2",
+          "path": "Ligjeratat/Ligjerata J2",
+          "children": [
+            {
+              "type": "file",
+              "name": "Ligjerata 2a.pdf",
+              "path": "Ligjeratat/Ligjerata J2/Ligjerata 2a.pdf",
+              "extension": "pdf",
+              "size": 470221
+            },
+            {
+              "type": "file",
+              "name": "Ligjerata 2b.pdf",
+              "path": "Ligjeratat/Ligjerata J2/Ligjerata 2b.pdf",
+              "extension": "pdf",
+              "size": 372014
+            },
+            {
+              "type": "file",
+              "name": "Ligjerata 2c  .pdf",
+              "path": "Ligjeratat/Ligjerata J2/Ligjerata 2c  .pdf",
+              "extension": "pdf",
+              "size": 441956
+            },
+            {
+              "type": "file",
+              "name": "Ligjerata 2ç.pdf",
+              "path": "Ligjeratat/Ligjerata J2/Ligjerata 2ç.pdf",
+              "extension": "pdf",
+              "size": 274975
+            },
+            {
+              "type": "file",
+              "name": "Ligjerata 2d.pdf",
+              "path": "Ligjeratat/Ligjerata J2/Ligjerata 2d.pdf",
+              "extension": "pdf",
+              "size": 668725
+            },
+            {
+              "type": "file",
+              "name": "Ligjerata 2dh.pdf",
+              "path": "Ligjeratat/Ligjerata J2/Ligjerata 2dh.pdf",
+              "extension": "pdf",
+              "size": 1405028
+            },
+            {
+              "type": "file",
+              "name": "Ligjerata 2e.pdf",
+              "path": "Ligjeratat/Ligjerata J2/Ligjerata 2e.pdf",
+              "extension": "pdf",
+              "size": 1067278
+            },
+            {
+              "type": "file",
+              "name": "Ligjerata 2f.pdf",
+              "path": "Ligjeratat/Ligjerata J2/Ligjerata 2f.pdf",
+              "extension": "pdf",
+              "size": 356706
+            },
+            {
+              "type": "file",
+              "name": "Ligjerata 2g.pdf",
+              "path": "Ligjeratat/Ligjerata J2/Ligjerata 2g.pdf",
+              "extension": "pdf",
+              "size": 833341
+            }
+          ]
+        },
+        {
+          "type": "folder",
+          "name": "Ligjerata J3",
+          "path": "Ligjeratat/Ligjerata J3",
+          "children": [
+            {
+              "type": "file",
+              "name": "Ligjerata 3a  .pdf",
+              "path": "Ligjeratat/Ligjerata J3/Ligjerata 3a  .pdf",
+              "extension": "pdf",
+              "size": 1150053
+            },
+            {
+              "type": "file",
+              "name": "Ligjerata 3b.pdf",
+              "path": "Ligjeratat/Ligjerata J3/Ligjerata 3b.pdf",
+              "extension": "pdf",
+              "size": 980382
+            },
+            {
+              "type": "file",
+              "name": "Ligjerata 3c.pdf",
+              "path": "Ligjeratat/Ligjerata J3/Ligjerata 3c.pdf",
+              "extension": "pdf",
+              "size": 489474
+            },
+            {
+              "type": "file",
+              "name": "Ligjerata 3ç.pdf",
+              "path": "Ligjeratat/Ligjerata J3/Ligjerata 3ç.pdf",
+              "extension": "pdf",
+              "size": 368571
+            },
+            {
+              "type": "file",
+              "name": "Ligjerata 3d.pdf",
+              "path": "Ligjeratat/Ligjerata J3/Ligjerata 3d.pdf",
+              "extension": "pdf",
+              "size": 318873
+            },
+            {
+              "type": "file",
+              "name": "Ligjerata 3dh.pdf",
+              "path": "Ligjeratat/Ligjerata J3/Ligjerata 3dh.pdf",
+              "extension": "pdf",
+              "size": 2191550
+            }
+          ]
+        },
+        {
+          "type": "folder",
+          "name": "Ligjerata J4",
+          "path": "Ligjeratat/Ligjerata J4",
+          "children": [
+            {
+              "type": "file",
+              "name": "Ligjerata 4a.pdf",
+              "path": "Ligjeratat/Ligjerata J4/Ligjerata 4a.pdf",
+              "extension": "pdf",
+              "size": 2094106
+            },
+            {
+              "type": "file",
+              "name": "Ligjerata 4b.pdf",
+              "path": "Ligjeratat/Ligjerata J4/Ligjerata 4b.pdf",
+              "extension": "pdf",
+              "size": 2385322
+            },
+            {
+              "type": "file",
+              "name": "Ligjerata 4c.pdf",
+              "path": "Ligjeratat/Ligjerata J4/Ligjerata 4c.pdf",
+              "extension": "pdf",
+              "size": 270405
+            },
+            {
+              "type": "file",
+              "name": "Ligjerata 4ç.pdf",
+              "path": "Ligjeratat/Ligjerata J4/Ligjerata 4ç.pdf",
+              "extension": "pdf",
+              "size": 974117
+            },
+            {
+              "type": "file",
+              "name": "Ligjerata 4d.pdf",
+              "path": "Ligjeratat/Ligjerata J4/Ligjerata 4d.pdf",
+              "extension": "pdf",
+              "size": 1046100
+            },
+            {
+              "type": "file",
+              "name": "Ligjerata 4dh.pdf",
+              "path": "Ligjeratat/Ligjerata J4/Ligjerata 4dh.pdf",
+              "extension": "pdf",
+              "size": 328074
+            },
+            {
+              "type": "file",
+              "name": "Ligjerata 4e.pdf",
+              "path": "Ligjeratat/Ligjerata J4/Ligjerata 4e.pdf",
+              "extension": "pdf",
+              "size": 560133
+            }
+          ]
+        },
+        {
+          "type": "folder",
+          "name": "Ligjerata J5",
+          "path": "Ligjeratat/Ligjerata J5",
+          "children": [
+            {
+              "type": "file",
+              "name": "Ligjerata 5a.pdf",
+              "path": "Ligjeratat/Ligjerata J5/Ligjerata 5a.pdf",
+              "extension": "pdf",
+              "size": 334020
+            },
+            {
+              "type": "file",
+              "name": "Ligjerata 5b.pdf",
+              "path": "Ligjeratat/Ligjerata J5/Ligjerata 5b.pdf",
+              "extension": "pdf",
+              "size": 614944
+            },
+            {
+              "type": "file",
+              "name": "Ligjerata 5c.pdf",
+              "path": "Ligjeratat/Ligjerata J5/Ligjerata 5c.pdf",
+              "extension": "pdf",
+              "size": 446331
+            },
+            {
+              "type": "file",
+              "name": "Ligjerata 5ç.pdf",
+              "path": "Ligjeratat/Ligjerata J5/Ligjerata 5ç.pdf",
+              "extension": "pdf",
+              "size": 644624
+            },
+            {
+              "type": "file",
+              "name": "Ligjerata 5d.pdf",
+              "path": "Ligjeratat/Ligjerata J5/Ligjerata 5d.pdf",
+              "extension": "pdf",
+              "size": 692159
+            },
+            {
+              "type": "file",
+              "name": "Ligjerata 5dh.pdf",
+              "path": "Ligjeratat/Ligjerata J5/Ligjerata 5dh.pdf",
+              "extension": "pdf",
+              "size": 324202
+            },
+            {
+              "type": "file",
+              "name": "Ligjerata 5e.pdf",
+              "path": "Ligjeratat/Ligjerata J5/Ligjerata 5e.pdf",
+              "extension": "pdf",
+              "size": 854061
+            },
+            {
+              "type": "file",
+              "name": "Ligjerata 5f.pdf",
+              "path": "Ligjeratat/Ligjerata J5/Ligjerata 5f.pdf",
+              "extension": "pdf",
+              "size": 732766
+            },
+            {
+              "type": "file",
+              "name": "Ligjerata 5g.pdf",
+              "path": "Ligjeratat/Ligjerata J5/Ligjerata 5g.pdf",
+              "extension": "pdf",
+              "size": 397132
+            }
+          ]
+        },
+        {
+          "type": "folder",
+          "name": "Ligjerata J6",
+          "path": "Ligjeratat/Ligjerata J6",
+          "children": [
+            {
+              "type": "file",
+              "name": "Ligjerata 6a.pdf",
+              "path": "Ligjeratat/Ligjerata J6/Ligjerata 6a.pdf",
+              "extension": "pdf",
+              "size": 502408
+            },
+            {
+              "type": "file",
+              "name": "Ligjerata 6b.pdf",
+              "path": "Ligjeratat/Ligjerata J6/Ligjerata 6b.pdf",
+              "extension": "pdf",
+              "size": 240842
+            },
+            {
+              "type": "file",
+              "name": "Ligjerata 6c.pdf",
+              "path": "Ligjeratat/Ligjerata J6/Ligjerata 6c.pdf",
+              "extension": "pdf",
+              "size": 193649
+            },
+            {
+              "type": "file",
+              "name": "Ligjerata 6ç.pdf",
+              "path": "Ligjeratat/Ligjerata J6/Ligjerata 6ç.pdf",
+              "extension": "pdf",
+              "size": 120576
+            },
+            {
+              "type": "file",
+              "name": "Ligjerata 6d.pdf",
+              "path": "Ligjeratat/Ligjerata J6/Ligjerata 6d.pdf",
+              "extension": "pdf",
+              "size": 583140
+            },
+            {
+              "type": "file",
+              "name": "Ligjerata 6dh.pdf",
+              "path": "Ligjeratat/Ligjerata J6/Ligjerata 6dh.pdf",
+              "extension": "pdf",
+              "size": 704767
+            },
+            {
+              "type": "file",
+              "name": "Ligjerata 6e.pdf",
+              "path": "Ligjeratat/Ligjerata J6/Ligjerata 6e.pdf",
+              "extension": "pdf",
+              "size": 700052
+            },
+            {
+              "type": "file",
+              "name": "Ligjerata 6ë.pdf",
+              "path": "Ligjeratat/Ligjerata J6/Ligjerata 6ë.pdf",
+              "extension": "pdf",
+              "size": 524449
+            },
+            {
+              "type": "file",
+              "name": "Ligjerata 6f.pdf",
+              "path": "Ligjeratat/Ligjerata J6/Ligjerata 6f.pdf",
+              "extension": "pdf",
+              "size": 359630
+            }
+          ]
+        },
+        {
+          "type": "folder",
+          "name": "Ligjerata J7",
+          "path": "Ligjeratat/Ligjerata J7",
+          "children": [
+            {
+              "type": "file",
+              "name": "Ligjerata 7a.pdf",
+              "path": "Ligjeratat/Ligjerata J7/Ligjerata 7a.pdf",
+              "extension": "pdf",
+              "size": 3606328
+            },
+            {
+              "type": "file",
+              "name": "Ligjerata 7b.pdf",
+              "path": "Ligjeratat/Ligjerata J7/Ligjerata 7b.pdf",
+              "extension": "pdf",
+              "size": 360533
+            },
+            {
+              "type": "file",
+              "name": "Ligjerata 7c.pdf",
+              "path": "Ligjeratat/Ligjerata J7/Ligjerata 7c.pdf",
+              "extension": "pdf",
+              "size": 891582
+            },
+            {
+              "type": "file",
+              "name": "Ligjerata 7ç.pdf",
+              "path": "Ligjeratat/Ligjerata J7/Ligjerata 7ç.pdf",
+              "extension": "pdf",
+              "size": 549703
+            },
+            {
+              "type": "file",
+              "name": "Ligjerata 7d.pdf",
+              "path": "Ligjeratat/Ligjerata J7/Ligjerata 7d.pdf",
+              "extension": "pdf",
+              "size": 1037538
+            },
+            {
+              "type": "file",
+              "name": "Ligjerata 7dh.pdf",
+              "path": "Ligjeratat/Ligjerata J7/Ligjerata 7dh.pdf",
+              "extension": "pdf",
+              "size": 1092802
+            },
+            {
+              "type": "file",
+              "name": "Ligjerata 7e.pdf",
+              "path": "Ligjeratat/Ligjerata J7/Ligjerata 7e.pdf",
+              "extension": "pdf",
+              "size": 1427217
+            },
+            {
+              "type": "file",
+              "name": "Ligjerata 7ë.pdf",
+              "path": "Ligjeratat/Ligjerata J7/Ligjerata 7ë.pdf",
+              "extension": "pdf",
+              "size": 255826
+            }
+          ]
+        },
+        {
+          "type": "folder",
+          "name": "Ligjerata J8",
+          "path": "Ligjeratat/Ligjerata J8",
+          "children": [
+            {
+              "type": "file",
+              "name": "Ligjerata 8a.pdf",
+              "path": "Ligjeratat/Ligjerata J8/Ligjerata 8a.pdf",
+              "extension": "pdf",
+              "size": 2741724
+            },
+            {
+              "type": "file",
+              "name": "Ligjerata 8b.pdf",
+              "path": "Ligjeratat/Ligjerata J8/Ligjerata 8b.pdf",
+              "extension": "pdf",
+              "size": 1267956
+            },
+            {
+              "type": "file",
+              "name": "Ligjerata 8c.pdf",
+              "path": "Ligjeratat/Ligjerata J8/Ligjerata 8c.pdf",
+              "extension": "pdf",
+              "size": 1022021
+            },
+            {
+              "type": "file",
+              "name": "Ligjerata 8ç.pdf",
+              "path": "Ligjeratat/Ligjerata J8/Ligjerata 8ç.pdf",
+              "extension": "pdf",
+              "size": 899115
+            },
+            {
+              "type": "file",
+              "name": "Ligjerata 8d.pdf",
+              "path": "Ligjeratat/Ligjerata J8/Ligjerata 8d.pdf",
+              "extension": "pdf",
+              "size": 1087136
+            },
+            {
+              "type": "file",
+              "name": "Ligjerata 8dh.pdf",
+              "path": "Ligjeratat/Ligjerata J8/Ligjerata 8dh.pdf",
+              "extension": "pdf",
+              "size": 328843
+            },
+            {
+              "type": "file",
+              "name": "Ligjerata 8e.pdf",
+              "path": "Ligjeratat/Ligjerata J8/Ligjerata 8e.pdf",
+              "extension": "pdf",
+              "size": 446709
+            },
+            {
+              "type": "file",
+              "name": "Ligjerata 8ë.pdf",
+              "path": "Ligjeratat/Ligjerata J8/Ligjerata 8ë.pdf",
+              "extension": "pdf",
+              "size": 1080532
+            }
+          ]
+        },
+        {
+          "type": "folder",
+          "name": "Ligjerata J9",
+          "path": "Ligjeratat/Ligjerata J9",
+          "children": [
+            {
+              "type": "file",
+              "name": "Ligjerata 9a.pdf",
+              "path": "Ligjeratat/Ligjerata J9/Ligjerata 9a.pdf",
+              "extension": "pdf",
+              "size": 200399
+            },
+            {
+              "type": "file",
+              "name": "Ligjerata 9b.pdf",
+              "path": "Ligjeratat/Ligjerata J9/Ligjerata 9b.pdf",
+              "extension": "pdf",
+              "size": 811046
+            },
+            {
+              "type": "file",
+              "name": "Ligjerata 9c.pdf",
+              "path": "Ligjeratat/Ligjerata J9/Ligjerata 9c.pdf",
+              "extension": "pdf",
+              "size": 1225511
+            },
+            {
+              "type": "file",
+              "name": "Ligjerata 9ç.pdf",
+              "path": "Ligjeratat/Ligjerata J9/Ligjerata 9ç.pdf",
+              "extension": "pdf",
+              "size": 497106
+            },
+            {
+              "type": "file",
+              "name": "Ligjerata 9d.pdf",
+              "path": "Ligjeratat/Ligjerata J9/Ligjerata 9d.pdf",
+              "extension": "pdf",
+              "size": 792070
+            },
+            {
+              "type": "file",
+              "name": "Ligjerata 9dh.pdf",
+              "path": "Ligjeratat/Ligjerata J9/Ligjerata 9dh.pdf",
+              "extension": "pdf",
+              "size": 416408
+            },
+            {
+              "type": "file",
+              "name": "Ligjerata 9e.pdf",
+              "path": "Ligjeratat/Ligjerata J9/Ligjerata 9e.pdf",
+              "extension": "pdf",
+              "size": 308140
+            },
+            {
+              "type": "file",
+              "name": "Ligjerata 9ë.pdf",
+              "path": "Ligjeratat/Ligjerata J9/Ligjerata 9ë.pdf",
+              "extension": "pdf",
+              "size": 937881
+            },
+            {
+              "type": "file",
+              "name": "Ligjerata 9f.pdf",
+              "path": "Ligjeratat/Ligjerata J9/Ligjerata 9f.pdf",
+              "extension": "pdf",
+              "size": 808800
+            },
+            {
+              "type": "file",
+              "name": "Ligjerata 9g.pdf",
+              "path": "Ligjeratat/Ligjerata J9/Ligjerata 9g.pdf",
+              "extension": "pdf",
+              "size": 929144
+            }
+          ]
+        },
+        {
+          "type": "folder",
+          "name": "Ligjerata J10",
+          "path": "Ligjeratat/Ligjerata J10",
+          "children": [
+            {
+              "type": "file",
+              "name": "Ligjerata 10a.pdf",
+              "path": "Ligjeratat/Ligjerata J10/Ligjerata 10a.pdf",
+              "extension": "pdf",
+              "size": 792014
+            },
+            {
+              "type": "file",
+              "name": "Ligjerata 10b.pdf",
+              "path": "Ligjeratat/Ligjerata J10/Ligjerata 10b.pdf",
+              "extension": "pdf",
+              "size": 2429036
+            },
+            {
+              "type": "file",
+              "name": "Ligjerata 10c.pdf",
+              "path": "Ligjeratat/Ligjerata J10/Ligjerata 10c.pdf",
+              "extension": "pdf",
+              "size": 862552
+            },
+            {
+              "type": "file",
+              "name": "Ligjerata 10ç.pdf",
+              "path": "Ligjeratat/Ligjerata J10/Ligjerata 10ç.pdf",
+              "extension": "pdf",
+              "size": 514022
+            },
+            {
+              "type": "file",
+              "name": "Ligjerata 10d.pdf",
+              "path": "Ligjeratat/Ligjerata J10/Ligjerata 10d.pdf",
+              "extension": "pdf",
+              "size": 808316
+            },
+            {
+              "type": "file",
+              "name": "Ligjerata 10dh.pdf",
+              "path": "Ligjeratat/Ligjerata J10/Ligjerata 10dh.pdf",
+              "extension": "pdf",
+              "size": 342286
+            },
+            {
+              "type": "file",
+              "name": "Ligjerata 10e.pdf",
+              "path": "Ligjeratat/Ligjerata J10/Ligjerata 10e.pdf",
+              "extension": "pdf",
+              "size": 492654
+            },
+            {
+              "type": "file",
+              "name": "Ligjerata 10ë.pdf",
+              "path": "Ligjeratat/Ligjerata J10/Ligjerata 10ë.pdf",
+              "extension": "pdf",
+              "size": 1347313
+            },
+            {
+              "type": "file",
+              "name": "Ligjerata 10f.pdf",
+              "path": "Ligjeratat/Ligjerata J10/Ligjerata 10f.pdf",
+              "extension": "pdf",
+              "size": 3028084
+            },
+            {
+              "type": "file",
+              "name": "Ligjerata 10g.pdf",
+              "path": "Ligjeratat/Ligjerata J10/Ligjerata 10g.pdf",
+              "extension": "pdf",
+              "size": 1586713
+            }
+          ]
+        },
+        {
+          "type": "folder",
+          "name": "Ligjerata J11",
+          "path": "Ligjeratat/Ligjerata J11",
+          "children": [
+            {
+              "type": "file",
+              "name": "Ligjerata 11a.pdf",
+              "path": "Ligjeratat/Ligjerata J11/Ligjerata 11a.pdf",
+              "extension": "pdf",
+              "size": 547609
+            },
+            {
+              "type": "file",
+              "name": "Ligjerata 11b.pdf",
+              "path": "Ligjeratat/Ligjerata J11/Ligjerata 11b.pdf",
+              "extension": "pdf",
+              "size": 1005214
+            },
+            {
+              "type": "file",
+              "name": "Ligjerata 11c.pdf",
+              "path": "Ligjeratat/Ligjerata J11/Ligjerata 11c.pdf",
+              "extension": "pdf",
+              "size": 966592
+            },
+            {
+              "type": "file",
+              "name": "Ligjerata 11ç.pdf",
+              "path": "Ligjeratat/Ligjerata J11/Ligjerata 11ç.pdf",
+              "extension": "pdf",
+              "size": 904822
+            },
+            {
+              "type": "file",
+              "name": "Ligjerata 11d.pdf",
+              "path": "Ligjeratat/Ligjerata J11/Ligjerata 11d.pdf",
+              "extension": "pdf",
+              "size": 880062
+            },
+            {
+              "type": "file",
+              "name": "Ligjerata 11dh.pdf",
+              "path": "Ligjeratat/Ligjerata J11/Ligjerata 11dh.pdf",
+              "extension": "pdf",
+              "size": 918618
+            },
+            {
+              "type": "file",
+              "name": "Ligjerata 11e.pdf",
+              "path": "Ligjeratat/Ligjerata J11/Ligjerata 11e.pdf",
+              "extension": "pdf",
+              "size": 1010967
+            },
+            {
+              "type": "file",
+              "name": "Ligjerata 11ë.pdf",
+              "path": "Ligjeratat/Ligjerata J11/Ligjerata 11ë.pdf",
+              "extension": "pdf",
+              "size": 946761
+            },
+            {
+              "type": "file",
+              "name": "Ligjerata 11f.pdf",
+              "path": "Ligjeratat/Ligjerata J11/Ligjerata 11f.pdf",
+              "extension": "pdf",
+              "size": 312869
+            },
+            {
+              "type": "file",
+              "name": "Ligjerata 11g.pdf",
+              "path": "Ligjeratat/Ligjerata J11/Ligjerata 11g.pdf",
+              "extension": "pdf",
+              "size": 1801309
+            },
+            {
+              "type": "file",
+              "name": "Ligjerata 11gj.pdf",
+              "path": "Ligjeratat/Ligjerata J11/Ligjerata 11gj.pdf",
+              "extension": "pdf",
+              "size": 1412923
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "folder",
+      "name": "Ushtrimet",
+      "path": "Ushtrimet",
+      "children": [
+        {
+          "type": "folder",
+          "name": "1. Detyrat kinematike J1",
+          "path": "Ushtrimet/1. Detyrat kinematike J1",
+          "children": [
+            {
+              "type": "file",
+              "name": "Ushtrime ND1a.pdf",
+              "path": "Ushtrimet/1. Detyrat kinematike J1/Ushtrime ND1a.pdf",
+              "extension": "pdf",
+              "size": 1990867
+            },
+            {
+              "type": "file",
+              "name": "Ushtrime ND1b.pdf",
+              "path": "Ushtrimet/1. Detyrat kinematike J1/Ushtrime ND1b.pdf",
+              "extension": "pdf",
+              "size": 485103
+            },
+            {
+              "type": "file",
+              "name": "Ushtrime ND1c.pdf",
+              "path": "Ushtrimet/1. Detyrat kinematike J1/Ushtrime ND1c.pdf",
+              "extension": "pdf",
+              "size": 165678
+            },
+            {
+              "type": "file",
+              "name": "Ushtrime ND1ç.pdf",
+              "path": "Ushtrimet/1. Detyrat kinematike J1/Ushtrime ND1ç.pdf",
+              "extension": "pdf",
+              "size": 548935
+            },
+            {
+              "type": "file",
+              "name": "Ushtrime ND1d.pdf",
+              "path": "Ushtrimet/1. Detyrat kinematike J1/Ushtrime ND1d.pdf",
+              "extension": "pdf",
+              "size": 309901
+            },
+            {
+              "type": "file",
+              "name": "Ushtrime ND1dh.pdf",
+              "path": "Ushtrimet/1. Detyrat kinematike J1/Ushtrime ND1dh.pdf",
+              "extension": "pdf",
+              "size": 138609
+            },
+            {
+              "type": "file",
+              "name": "Ushtrime ND1e.pdf",
+              "path": "Ushtrimet/1. Detyrat kinematike J1/Ushtrime ND1e.pdf",
+              "extension": "pdf",
+              "size": 177494
+            },
+            {
+              "type": "file",
+              "name": "Ushtrime ND1ë.pdf",
+              "path": "Ushtrimet/1. Detyrat kinematike J1/Ushtrime ND1ë.pdf",
+              "extension": "pdf",
+              "size": 367595
+            },
+            {
+              "type": "file",
+              "name": "Ushtrime ND1f.pdf",
+              "path": "Ushtrimet/1. Detyrat kinematike J1/Ushtrime ND1f.pdf",
+              "extension": "pdf",
+              "size": 219961
+            },
+            {
+              "type": "file",
+              "name": "Ushtrime ND1g.pdf",
+              "path": "Ushtrimet/1. Detyrat kinematike J1/Ushtrime ND1g.pdf",
+              "extension": "pdf",
+              "size": 558213
+            }
+          ]
+        },
+        {
+          "type": "folder",
+          "name": "2. Detyrat kinematike J2",
+          "path": "Ushtrimet/2. Detyrat kinematike J2",
+          "children": [
+            {
+              "type": "file",
+              "name": "Ushtrime ND2a.pdf",
+              "path": "Ushtrimet/2. Detyrat kinematike J2/Ushtrime ND2a.pdf",
+              "extension": "pdf",
+              "size": 703338
+            },
+            {
+              "type": "file",
+              "name": "Ushtrime ND2b.pdf",
+              "path": "Ushtrimet/2. Detyrat kinematike J2/Ushtrime ND2b.pdf",
+              "extension": "pdf",
+              "size": 977615
+            },
+            {
+              "type": "file",
+              "name": "Ushtrime ND2c.pdf",
+              "path": "Ushtrimet/2. Detyrat kinematike J2/Ushtrime ND2c.pdf",
+              "extension": "pdf",
+              "size": 636247
+            },
+            {
+              "type": "file",
+              "name": "Ushtrime ND2ç.pdf",
+              "path": "Ushtrimet/2. Detyrat kinematike J2/Ushtrime ND2ç.pdf",
+              "extension": "pdf",
+              "size": 388895
+            },
+            {
+              "type": "file",
+              "name": "Ushtrime ND2d.pdf",
+              "path": "Ushtrimet/2. Detyrat kinematike J2/Ushtrime ND2d.pdf",
+              "extension": "pdf",
+              "size": 771065
+            },
+            {
+              "type": "file",
+              "name": "Ushtrime ND2dh.pdf",
+              "path": "Ushtrimet/2. Detyrat kinematike J2/Ushtrime ND2dh.pdf",
+              "extension": "pdf",
+              "size": 427555
+            },
+            {
+              "type": "file",
+              "name": "Ushtrime ND2e.pdf",
+              "path": "Ushtrimet/2. Detyrat kinematike J2/Ushtrime ND2e.pdf",
+              "extension": "pdf",
+              "size": 736321
+            },
+            {
+              "type": "file",
+              "name": "Ushtrime ND2ë.pdf",
+              "path": "Ushtrimet/2. Detyrat kinematike J2/Ushtrime ND2ë.pdf",
+              "extension": "pdf",
+              "size": 1047109
+            },
+            {
+              "type": "file",
+              "name": "Ushtrime ND2f.pdf",
+              "path": "Ushtrimet/2. Detyrat kinematike J2/Ushtrime ND2f.pdf",
+              "extension": "pdf",
+              "size": 590413
+            },
+            {
+              "type": "file",
+              "name": "Ushtrime ND2g.pdf",
+              "path": "Ushtrimet/2. Detyrat kinematike J2/Ushtrime ND2g.pdf",
+              "extension": "pdf",
+              "size": 464175
+            }
+          ]
+        },
+        {
+          "type": "folder",
+          "name": "3. Detyrat kinematike J3",
+          "path": "Ushtrimet/3. Detyrat kinematike J3",
+          "children": [
+            {
+              "type": "file",
+              "name": "Ushtrime ND3a.pdf",
+              "path": "Ushtrimet/3. Detyrat kinematike J3/Ushtrime ND3a.pdf",
+              "extension": "pdf",
+              "size": 1425346
+            },
+            {
+              "type": "file",
+              "name": "Ushtrime ND3b.pdf",
+              "path": "Ushtrimet/3. Detyrat kinematike J3/Ushtrime ND3b.pdf",
+              "extension": "pdf",
+              "size": 623993
+            },
+            {
+              "type": "file",
+              "name": "Ushtrime ND3c.pdf",
+              "path": "Ushtrimet/3. Detyrat kinematike J3/Ushtrime ND3c.pdf",
+              "extension": "pdf",
+              "size": 232143
+            },
+            {
+              "type": "file",
+              "name": "Ushtrime ND3ç.pdf",
+              "path": "Ushtrimet/3. Detyrat kinematike J3/Ushtrime ND3ç.pdf",
+              "extension": "pdf",
+              "size": 201567
+            },
+            {
+              "type": "file",
+              "name": "Ushtrime ND3d.pdf",
+              "path": "Ushtrimet/3. Detyrat kinematike J3/Ushtrime ND3d.pdf",
+              "extension": "pdf",
+              "size": 245387
+            },
+            {
+              "type": "file",
+              "name": "Ushtrime ND3dh.pdf",
+              "path": "Ushtrimet/3. Detyrat kinematike J3/Ushtrime ND3dh.pdf",
+              "extension": "pdf",
+              "size": 515358
+            },
+            {
+              "type": "file",
+              "name": "Ushtrime ND3e.pdf",
+              "path": "Ushtrimet/3. Detyrat kinematike J3/Ushtrime ND3e.pdf",
+              "extension": "pdf",
+              "size": 355608
+            },
+            {
+              "type": "file",
+              "name": "Ushtrime ND3eZ.pdf",
+              "path": "Ushtrimet/3. Detyrat kinematike J3/Ushtrime ND3eZ.pdf",
+              "extension": "pdf",
+              "size": 602006
+            },
+            {
+              "type": "file",
+              "name": "Ushtrime ND3ë.pdf",
+              "path": "Ushtrimet/3. Detyrat kinematike J3/Ushtrime ND3ë.pdf",
+              "extension": "pdf",
+              "size": 171984
+            },
+            {
+              "type": "file",
+              "name": "Ushtrime ND3ëZ.pdf",
+              "path": "Ushtrimet/3. Detyrat kinematike J3/Ushtrime ND3ëZ.pdf",
+              "extension": "pdf",
+              "size": 585645
+            },
+            {
+              "type": "file",
+              "name": "Ushtrime ND3f.pdf",
+              "path": "Ushtrimet/3. Detyrat kinematike J3/Ushtrime ND3f.pdf",
+              "extension": "pdf",
+              "size": 191855
+            },
+            {
+              "type": "file",
+              "name": "Ushtrime ND3fZ.pdf",
+              "path": "Ushtrimet/3. Detyrat kinematike J3/Ushtrime ND3fZ.pdf",
+              "extension": "pdf",
+              "size": 438538
+            },
+            {
+              "type": "file",
+              "name": "Ushtrime ND3g.pdf",
+              "path": "Ushtrimet/3. Detyrat kinematike J3/Ushtrime ND3g.pdf",
+              "extension": "pdf",
+              "size": 227432
+            },
+            {
+              "type": "file",
+              "name": "Ushtrime ND3gZ.pdf",
+              "path": "Ushtrimet/3. Detyrat kinematike J3/Ushtrime ND3gZ.pdf",
+              "extension": "pdf",
+              "size": 351374
+            }
+          ]
+        },
+        {
+          "type": "folder",
+          "name": "4. Detyrat dinamika J4",
+          "path": "Ushtrimet/4. Detyrat dinamika J4",
+          "children": [
+            {
+              "type": "file",
+              "name": "Ushtrime ND4a.pdf",
+              "path": "Ushtrimet/4. Detyrat dinamika J4/Ushtrime ND4a.pdf",
+              "extension": "pdf",
+              "size": 1213420
+            },
+            {
+              "type": "file",
+              "name": "Ushtrime ND4b.pdf",
+              "path": "Ushtrimet/4. Detyrat dinamika J4/Ushtrime ND4b.pdf",
+              "extension": "pdf",
+              "size": 651537
+            },
+            {
+              "type": "file",
+              "name": "Ushtrime ND4c.pdf",
+              "path": "Ushtrimet/4. Detyrat dinamika J4/Ushtrime ND4c.pdf",
+              "extension": "pdf",
+              "size": 377324
+            },
+            {
+              "type": "file",
+              "name": "Ushtrime ND4ç.pdf",
+              "path": "Ushtrimet/4. Detyrat dinamika J4/Ushtrime ND4ç.pdf",
+              "extension": "pdf",
+              "size": 836459
+            },
+            {
+              "type": "file",
+              "name": "Ushtrime ND4d.pdf",
+              "path": "Ushtrimet/4. Detyrat dinamika J4/Ushtrime ND4d.pdf",
+              "extension": "pdf",
+              "size": 519644
+            },
+            {
+              "type": "file",
+              "name": "Ushtrime ND4dh.pdf",
+              "path": "Ushtrimet/4. Detyrat dinamika J4/Ushtrime ND4dh.pdf",
+              "extension": "pdf",
+              "size": 508603
+            },
+            {
+              "type": "file",
+              "name": "Ushtrime ND4e.pdf",
+              "path": "Ushtrimet/4. Detyrat dinamika J4/Ushtrime ND4e.pdf",
+              "extension": "pdf",
+              "size": 524422
+            },
+            {
+              "type": "file",
+              "name": "Ushtrime ND4ë.pdf",
+              "path": "Ushtrimet/4. Detyrat dinamika J4/Ushtrime ND4ë.pdf",
+              "extension": "pdf",
+              "size": 625337
+            },
+            {
+              "type": "file",
+              "name": "Ushtrime ND4f.pdf",
+              "path": "Ushtrimet/4. Detyrat dinamika J4/Ushtrime ND4f.pdf",
+              "extension": "pdf",
+              "size": 365081
+            },
+            {
+              "type": "file",
+              "name": "Ushtrime ND4g.pdf",
+              "path": "Ushtrimet/4. Detyrat dinamika J4/Ushtrime ND4g.pdf",
+              "extension": "pdf",
+              "size": 699162
+            }
+          ]
+        },
+        {
+          "type": "folder",
+          "name": "5. Detyrat puna dhe energjia J5",
+          "path": "Ushtrimet/5. Detyrat puna dhe energjia J5",
+          "children": [
+            {
+              "type": "file",
+              "name": "Ushtrime ND5a.pdf",
+              "path": "Ushtrimet/5. Detyrat puna dhe energjia J5/Ushtrime ND5a.pdf",
+              "extension": "pdf",
+              "size": 433478
+            },
+            {
+              "type": "file",
+              "name": "Ushtrime ND5b.pdf",
+              "path": "Ushtrimet/5. Detyrat puna dhe energjia J5/Ushtrime ND5b.pdf",
+              "extension": "pdf",
+              "size": 632507
+            },
+            {
+              "type": "file",
+              "name": "Ushtrime ND5c (1).pdf",
+              "path": "Ushtrimet/5. Detyrat puna dhe energjia J5/Ushtrime ND5c (1).pdf",
+              "extension": "pdf",
+              "size": 3105095
+            },
+            {
+              "type": "file",
+              "name": "Ushtrime ND5c.pdf",
+              "path": "Ushtrimet/5. Detyrat puna dhe energjia J5/Ushtrime ND5c.pdf",
+              "extension": "pdf",
+              "size": 768838
+            },
+            {
+              "type": "file",
+              "name": "Ushtrime ND5ç.pdf",
+              "path": "Ushtrimet/5. Detyrat puna dhe energjia J5/Ushtrime ND5ç.pdf",
+              "extension": "pdf",
+              "size": 852870
+            },
+            {
+              "type": "file",
+              "name": "Ushtrime ND5d.pdf",
+              "path": "Ushtrimet/5. Detyrat puna dhe energjia J5/Ushtrime ND5d.pdf",
+              "extension": "pdf",
+              "size": 1344049
+            },
+            {
+              "type": "file",
+              "name": "Ushtrime ND5dh.pdf",
+              "path": "Ushtrimet/5. Detyrat puna dhe energjia J5/Ushtrime ND5dh.pdf",
+              "extension": "pdf",
+              "size": 1252405
+            },
+            {
+              "type": "file",
+              "name": "Ushtrime ND5e.pdf",
+              "path": "Ushtrimet/5. Detyrat puna dhe energjia J5/Ushtrime ND5e.pdf",
+              "extension": "pdf",
+              "size": 379436
+            },
+            {
+              "type": "file",
+              "name": "Ushtrime ND5ë.pdf",
+              "path": "Ushtrimet/5. Detyrat puna dhe energjia J5/Ushtrime ND5ë.pdf",
+              "extension": "pdf",
+              "size": 812008
+            },
+            {
+              "type": "file",
+              "name": "Ushtrime ND5f.pdf",
+              "path": "Ushtrimet/5. Detyrat puna dhe energjia J5/Ushtrime ND5f.pdf",
+              "extension": "pdf",
+              "size": 544296
+            },
+            {
+              "type": "file",
+              "name": "Ushtrime ND5g.pdf",
+              "path": "Ushtrimet/5. Detyrat puna dhe energjia J5/Ushtrime ND5g.pdf",
+              "extension": "pdf",
+              "size": 602080
+            }
+          ]
+        },
+        {
+          "type": "folder",
+          "name": "6. Detyrat levizjet rrotulluese J6",
+          "path": "Ushtrimet/6. Detyrat levizjet rrotulluese J6",
+          "children": [
+            {
+              "type": "file",
+              "name": "Ushtrime ND5b.pdf",
+              "path": "Ushtrimet/6. Detyrat levizjet rrotulluese J6/Ushtrime ND5b.pdf",
+              "extension": "pdf",
+              "size": 1276933
+            },
+            {
+              "type": "file",
+              "name": "Ushtrime ND5ç.pdf",
+              "path": "Ushtrimet/6. Detyrat levizjet rrotulluese J6/Ushtrime ND5ç.pdf",
+              "extension": "pdf",
+              "size": 1071306
+            },
+            {
+              "type": "file",
+              "name": "Ushtrime ND5d.pdf",
+              "path": "Ushtrimet/6. Detyrat levizjet rrotulluese J6/Ushtrime ND5d.pdf",
+              "extension": "pdf",
+              "size": 1828495
+            },
+            {
+              "type": "file",
+              "name": "Ushtrime ND5e.pdf",
+              "path": "Ushtrimet/6. Detyrat levizjet rrotulluese J6/Ushtrime ND5e.pdf",
+              "extension": "pdf",
+              "size": 719676
+            },
+            {
+              "type": "file",
+              "name": "Ushtrime ND5f.pdf",
+              "path": "Ushtrimet/6. Detyrat levizjet rrotulluese J6/Ushtrime ND5f.pdf",
+              "extension": "pdf",
+              "size": 814245
+            },
+            {
+              "type": "file",
+              "name": "Ushtrime ND6a.pdf",
+              "path": "Ushtrimet/6. Detyrat levizjet rrotulluese J6/Ushtrime ND6a.pdf",
+              "extension": "pdf",
+              "size": 449021
+            },
+            {
+              "type": "file",
+              "name": "Ushtrime ND6b.pdf",
+              "path": "Ushtrimet/6. Detyrat levizjet rrotulluese J6/Ushtrime ND6b.pdf",
+              "extension": "pdf",
+              "size": 653902
+            },
+            {
+              "type": "file",
+              "name": "Ushtrime ND6c.pdf",
+              "path": "Ushtrimet/6. Detyrat levizjet rrotulluese J6/Ushtrime ND6c.pdf",
+              "extension": "pdf",
+              "size": 431474
+            },
+            {
+              "type": "file",
+              "name": "Ushtrime ND6ç.pdf",
+              "path": "Ushtrimet/6. Detyrat levizjet rrotulluese J6/Ushtrime ND6ç.pdf",
+              "extension": "pdf",
+              "size": 385668
+            },
+            {
+              "type": "file",
+              "name": "Ushtrime ND6d.pdf",
+              "path": "Ushtrimet/6. Detyrat levizjet rrotulluese J6/Ushtrime ND6d.pdf",
+              "extension": "pdf",
+              "size": 277704
+            },
+            {
+              "type": "file",
+              "name": "Ushtrime ND6dh.pdf",
+              "path": "Ushtrimet/6. Detyrat levizjet rrotulluese J6/Ushtrime ND6dh.pdf",
+              "extension": "pdf",
+              "size": 987197
+            }
+          ]
+        },
+        {
+          "type": "folder",
+          "name": "7. Graviteti J7",
+          "path": "Ushtrimet/7. Graviteti J7",
+          "children": [
+            {
+              "type": "file",
+              "name": "Ushtrime ND7a.pdf",
+              "path": "Ushtrimet/7. Graviteti J7/Ushtrime ND7a.pdf",
+              "extension": "pdf",
+              "size": 854645
+            },
+            {
+              "type": "file",
+              "name": "Ushtrime ND7b.pdf",
+              "path": "Ushtrimet/7. Graviteti J7/Ushtrime ND7b.pdf",
+              "extension": "pdf",
+              "size": 1178503
+            },
+            {
+              "type": "file",
+              "name": "Ushtrime ND7c.pdf",
+              "path": "Ushtrimet/7. Graviteti J7/Ushtrime ND7c.pdf",
+              "extension": "pdf",
+              "size": 734301
+            },
+            {
+              "type": "file",
+              "name": "Ushtrime ND7ç.pdf",
+              "path": "Ushtrimet/7. Graviteti J7/Ushtrime ND7ç.pdf",
+              "extension": "pdf",
+              "size": 628754
+            },
+            {
+              "type": "file",
+              "name": "Ushtrime ND7d.pdf",
+              "path": "Ushtrimet/7. Graviteti J7/Ushtrime ND7d.pdf",
+              "extension": "pdf",
+              "size": 1073052
+            },
+            {
+              "type": "file",
+              "name": "Ushtrime ND7dh.pdf",
+              "path": "Ushtrimet/7. Graviteti J7/Ushtrime ND7dh.pdf",
+              "extension": "pdf",
+              "size": 1000670
+            },
+            {
+              "type": "file",
+              "name": "Ushtrime ND7ë.pdf",
+              "path": "Ushtrimet/7. Graviteti J7/Ushtrime ND7ë.pdf",
+              "extension": "pdf",
+              "size": 908391
+            },
+            {
+              "type": "file",
+              "name": "Ushtrime ND7f.pdf",
+              "path": "Ushtrimet/7. Graviteti J7/Ushtrime ND7f.pdf",
+              "extension": "pdf",
+              "size": 373439
+            },
+            {
+              "type": "file",
+              "name": "Ushtrime ND7g.pdf",
+              "path": "Ushtrimet/7. Graviteti J7/Ushtrime ND7g.pdf",
+              "extension": "pdf",
+              "size": 753083
+            }
+          ]
+        },
+        {
+          "type": "folder",
+          "name": "8. Hidrostatika J8",
+          "path": "Ushtrimet/8. Hidrostatika J8",
+          "children": [
+            {
+              "type": "file",
+              "name": "Ushtrime ND8a.pdf",
+              "path": "Ushtrimet/8. Hidrostatika J8/Ushtrime ND8a.pdf",
+              "extension": "pdf",
+              "size": 590007
+            },
+            {
+              "type": "file",
+              "name": "Ushtrime ND8b.pdf",
+              "path": "Ushtrimet/8. Hidrostatika J8/Ushtrime ND8b.pdf",
+              "extension": "pdf",
+              "size": 922812
+            },
+            {
+              "type": "file",
+              "name": "Ushtrime ND8c.pdf",
+              "path": "Ushtrimet/8. Hidrostatika J8/Ushtrime ND8c.pdf",
+              "extension": "pdf",
+              "size": 1928013
+            },
+            {
+              "type": "file",
+              "name": "Ushtrime ND8ç.pdf",
+              "path": "Ushtrimet/8. Hidrostatika J8/Ushtrime ND8ç.pdf",
+              "extension": "pdf",
+              "size": 498590
+            },
+            {
+              "type": "file",
+              "name": "Ushtrime ND8d.pdf",
+              "path": "Ushtrimet/8. Hidrostatika J8/Ushtrime ND8d.pdf",
+              "extension": "pdf",
+              "size": 2435665
+            },
+            {
+              "type": "file",
+              "name": "Ushtrime ND8dh.pdf",
+              "path": "Ushtrimet/8. Hidrostatika J8/Ushtrime ND8dh.pdf",
+              "extension": "pdf",
+              "size": 1558605
+            },
+            {
+              "type": "file",
+              "name": "Ushtrime ND8e.pdf",
+              "path": "Ushtrimet/8. Hidrostatika J8/Ushtrime ND8e.pdf",
+              "extension": "pdf",
+              "size": 965481
+            },
+            {
+              "type": "file",
+              "name": "Ushtrime ND8ë.pdf",
+              "path": "Ushtrimet/8. Hidrostatika J8/Ushtrime ND8ë.pdf",
+              "extension": "pdf",
+              "size": 521198
+            },
+            {
+              "type": "file",
+              "name": "Ushtrime ND8g.pdf",
+              "path": "Ushtrimet/8. Hidrostatika J8/Ushtrime ND8g.pdf",
+              "extension": "pdf",
+              "size": 507247
+            }
+          ]
+        },
+        {
+          "type": "folder",
+          "name": "9. Hidrodinamika J9",
+          "path": "Ushtrimet/9. Hidrodinamika J9",
+          "children": [
+            {
+              "type": "file",
+              "name": "Ushtrime ND9a.pdf",
+              "path": "Ushtrimet/9. Hidrodinamika J9/Ushtrime ND9a.pdf",
+              "extension": "pdf",
+              "size": 632248
+            },
+            {
+              "type": "file",
+              "name": "Ushtrime ND9b.pdf",
+              "path": "Ushtrimet/9. Hidrodinamika J9/Ushtrime ND9b.pdf",
+              "extension": "pdf",
+              "size": 543399
+            },
+            {
+              "type": "file",
+              "name": "Ushtrime ND9c.pdf",
+              "path": "Ushtrimet/9. Hidrodinamika J9/Ushtrime ND9c.pdf",
+              "extension": "pdf",
+              "size": 553182
+            },
+            {
+              "type": "file",
+              "name": "Ushtrime ND9ç.pdf",
+              "path": "Ushtrimet/9. Hidrodinamika J9/Ushtrime ND9ç.pdf",
+              "extension": "pdf",
+              "size": 1235917
+            },
+            {
+              "type": "file",
+              "name": "Ushtrime ND9d.pdf",
+              "path": "Ushtrimet/9. Hidrodinamika J9/Ushtrime ND9d.pdf",
+              "extension": "pdf",
+              "size": 757832
+            },
+            {
+              "type": "file",
+              "name": "Ushtrime ND9dh.pdf",
+              "path": "Ushtrimet/9. Hidrodinamika J9/Ushtrime ND9dh.pdf",
+              "extension": "pdf",
+              "size": 427042
+            },
+            {
+              "type": "file",
+              "name": "Ushtrime ND9e.pdf",
+              "path": "Ushtrimet/9. Hidrodinamika J9/Ushtrime ND9e.pdf",
+              "extension": "pdf",
+              "size": 552402
+            },
+            {
+              "type": "file",
+              "name": "Ushtrime ND9ë.pdf",
+              "path": "Ushtrimet/9. Hidrodinamika J9/Ushtrime ND9ë.pdf",
+              "extension": "pdf",
+              "size": 1119058
+            },
+            {
+              "type": "file",
+              "name": "Ushtrime ND9f.pdf",
+              "path": "Ushtrimet/9. Hidrodinamika J9/Ushtrime ND9f.pdf",
+              "extension": "pdf",
+              "size": 184865
+            },
+            {
+              "type": "file",
+              "name": "Ushtrime ND9g.pdf",
+              "path": "Ushtrimet/9. Hidrodinamika J9/Ushtrime ND9g.pdf",
+              "extension": "pdf",
+              "size": 613150
+            }
+          ]
+        },
+        {
+          "type": "folder",
+          "name": "10. Ligjet e gazeve J9",
+          "path": "Ushtrimet/10. Ligjet e gazeve J9",
+          "children": [
+            {
+              "type": "file",
+              "name": "Ushtrime ND9e.pdf",
+              "path": "Ushtrimet/10. Ligjet e gazeve J9/Ushtrime ND9e.pdf",
+              "extension": "pdf",
+              "size": 552402
+            },
+            {
+              "type": "file",
+              "name": "Ushtrime ND9ë.pdf",
+              "path": "Ushtrimet/10. Ligjet e gazeve J9/Ushtrime ND9ë.pdf",
+              "extension": "pdf",
+              "size": 1119058
+            },
+            {
+              "type": "file",
+              "name": "Ushtrime ND9f.pdf",
+              "path": "Ushtrimet/10. Ligjet e gazeve J9/Ushtrime ND9f.pdf",
+              "extension": "pdf",
+              "size": 184865
+            },
+            {
+              "type": "file",
+              "name": "Ushtrime ND9g.pdf",
+              "path": "Ushtrimet/10. Ligjet e gazeve J9/Ushtrime ND9g.pdf",
+              "extension": "pdf",
+              "size": 613150
+            }
+          ]
+        },
+        {
+          "type": "folder",
+          "name": "11. Nxehtesia J10",
+          "path": "Ushtrimet/11. Nxehtesia J10",
+          "children": [
+            {
+              "type": "file",
+              "name": "Ushtrime ND10a.pdf",
+              "path": "Ushtrimet/11. Nxehtesia J10/Ushtrime ND10a.pdf",
+              "extension": "pdf",
+              "size": 1131515
+            },
+            {
+              "type": "file",
+              "name": "Ushtrime ND10b.pdf",
+              "path": "Ushtrimet/11. Nxehtesia J10/Ushtrime ND10b.pdf",
+              "extension": "pdf",
+              "size": 1147021
+            },
+            {
+              "type": "file",
+              "name": "Ushtrime ND10c.pdf",
+              "path": "Ushtrimet/11. Nxehtesia J10/Ushtrime ND10c.pdf",
+              "extension": "pdf",
+              "size": 1193391
+            },
+            {
+              "type": "file",
+              "name": "Ushtrime ND10ç.pdf",
+              "path": "Ushtrimet/11. Nxehtesia J10/Ushtrime ND10ç.pdf",
+              "extension": "pdf",
+              "size": 694123
+            },
+            {
+              "type": "file",
+              "name": "Ushtrime ND10d.pdf",
+              "path": "Ushtrimet/11. Nxehtesia J10/Ushtrime ND10d.pdf",
+              "extension": "pdf",
+              "size": 972116
+            },
+            {
+              "type": "file",
+              "name": "Ushtrime ND10dh.pdf",
+              "path": "Ushtrimet/11. Nxehtesia J10/Ushtrime ND10dh.pdf",
+              "extension": "pdf",
+              "size": 717894
+            },
+            {
+              "type": "file",
+              "name": "Ushtrime ND10e.pdf",
+              "path": "Ushtrimet/11. Nxehtesia J10/Ushtrime ND10e.pdf",
+              "extension": "pdf",
+              "size": 466487
+            },
+            {
+              "type": "file",
+              "name": "Ushtrime ND10ë.pdf",
+              "path": "Ushtrimet/11. Nxehtesia J10/Ushtrime ND10ë.pdf",
+              "extension": "pdf",
+              "size": 269301
+            },
+            {
+              "type": "file",
+              "name": "Ushtrime ND10f.pdf",
+              "path": "Ushtrimet/11. Nxehtesia J10/Ushtrime ND10f.pdf",
+              "extension": "pdf",
+              "size": 786364
+            },
+            {
+              "type": "file",
+              "name": "Ushtrime ND10g.pdf",
+              "path": "Ushtrimet/11. Nxehtesia J10/Ushtrime ND10g.pdf",
+              "extension": "pdf",
+              "size": 319932
+            }
+          ]
+        },
+        {
+          "type": "folder",
+          "name": "12. N. i gj. agragate_TMKG_Termo.J11",
+          "path": "Ushtrimet/12. N. i gj. agragate_TMKG_Termo.J11",
+          "children": [
+            {
+              "type": "file",
+              "name": "Ushtrime ND11a.pdf",
+              "path": "Ushtrimet/12. N. i gj. agragate_TMKG_Termo.J11/Ushtrime ND11a.pdf",
+              "extension": "pdf",
+              "size": 1131805
+            },
+            {
+              "type": "file",
+              "name": "Ushtrime ND11b.pdf",
+              "path": "Ushtrimet/12. N. i gj. agragate_TMKG_Termo.J11/Ushtrime ND11b.pdf",
+              "extension": "pdf",
+              "size": 1153428
+            },
+            {
+              "type": "file",
+              "name": "Ushtrime ND11c.pdf",
+              "path": "Ushtrimet/12. N. i gj. agragate_TMKG_Termo.J11/Ushtrime ND11c.pdf",
+              "extension": "pdf",
+              "size": 1123282
+            },
+            {
+              "type": "file",
+              "name": "Ushtrime ND11ç.pdf",
+              "path": "Ushtrimet/12. N. i gj. agragate_TMKG_Termo.J11/Ushtrime ND11ç.pdf",
+              "extension": "pdf",
+              "size": 963316
+            },
+            {
+              "type": "file",
+              "name": "Ushtrime ND11d.pdf",
+              "path": "Ushtrimet/12. N. i gj. agragate_TMKG_Termo.J11/Ushtrime ND11d.pdf",
+              "extension": "pdf",
+              "size": 425555
+            },
+            {
+              "type": "file",
+              "name": "Ushtrime ND11dh.pdf",
+              "path": "Ushtrimet/12. N. i gj. agragate_TMKG_Termo.J11/Ushtrime ND11dh.pdf",
+              "extension": "pdf",
+              "size": 835403
+            },
+            {
+              "type": "file",
+              "name": "Ushtrime ND11e.pdf",
+              "path": "Ushtrimet/12. N. i gj. agragate_TMKG_Termo.J11/Ushtrime ND11e.pdf",
+              "extension": "pdf",
+              "size": 1211316
+            },
+            {
+              "type": "file",
+              "name": "Ushtrime ND11ë.pdf",
+              "path": "Ushtrimet/12. N. i gj. agragate_TMKG_Termo.J11/Ushtrime ND11ë.pdf",
+              "extension": "pdf",
+              "size": 983696
+            },
+            {
+              "type": "file",
+              "name": "Ushtrime ND11f.pdf",
+              "path": "Ushtrimet/12. N. i gj. agragate_TMKG_Termo.J11/Ushtrime ND11f.pdf",
+              "extension": "pdf",
+              "size": 299334
+            },
+            {
+              "type": "file",
+              "name": "Ushtrime ND11g.pdf",
+              "path": "Ushtrimet/12. N. i gj. agragate_TMKG_Termo.J11/Ushtrime ND11g.pdf",
+              "extension": "pdf",
+              "size": 881341
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "name": "Detyrat nga Fizika 1.pdf",
+      "path": "Detyrat nga Fizika 1.pdf",
+      "extension": "pdf",
+      "size": 558698
+    },
+    {
+      "type": "file",
+      "name": "Raport.xlsx",
+      "path": "Raport.xlsx",
+      "extension": "xlsx",
+      "size": 212341
+    },
+    {
+      "type": "file",
+      "name": "Temat nga Fizika per inxhinieri 1 per testin e dyte.docx",
+      "path": "Temat nga Fizika per inxhinieri 1 per testin e dyte.docx",
+      "extension": "docx",
+      "size": 18098
+    },
+    {
+      "type": "file",
+      "name": "Temat nga Fizika per inxhinieri 1 per testin e pare.docx",
+      "path": "Temat nga Fizika per inxhinieri 1 per testin e pare.docx",
+      "extension": "docx",
+      "size": 19332
+    }
+  ]
+}

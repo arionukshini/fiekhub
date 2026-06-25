@@ -8,7 +8,7 @@ function ProtectedRoute({ children, requireSetup = true }) {
   if (loading) {
     return (
       <main className="centered-page">
-        <p className="status-text">Loading...</p>
+        <p className="status-text">Duke u ngarkuar...</p>
       </main>
     )
   }

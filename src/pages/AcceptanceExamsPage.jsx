@@ -117,11 +117,11 @@ function AcceptanceExamsPage() {
                       rel="noreferrer"
                     >
                       <ExternalLink aria-hidden="true" size={17} />
-                      Open
+                      Hap
                     </a>
                     <a href={selectedDocument.url} download>
                       <Download aria-hidden="true" size={17} />
-                      Download
+                      Shkarko
                     </a>
                   </div>
                 )}

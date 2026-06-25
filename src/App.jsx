@@ -13,6 +13,7 @@ import FaqPage from './pages/FaqPage.jsx'
 import ForgotPasswordPage from './pages/ForgotPasswordPage.jsx'
 import LandingPage from './pages/LandingPage.jsx'
 import LoginPage from './pages/LoginPage.jsx'
+import MaterialsPage from './pages/MaterialsPage.jsx'
 import PrivacyPolicyPage from './pages/PrivacyPolicyPage.jsx'
 import RegisterPage from './pages/RegisterPage.jsx'
 import SetupPage from './pages/SetupPage.jsx'
@@ -41,6 +42,14 @@ function App() {
             <Route path="/privacy" element={<PrivacyPolicyPage />} />
             <Route path="/terms" element={<TermsPage />} />
             <Route path="/faq" element={<FaqPage />} />
+            <Route
+              path="/materials"
+              element={
+                <ProtectedRoute>
+                  <MaterialsPage />
+                </ProtectedRoute>
+              }
+            />
             <Route
               path="/provime-pranuese"
               element={

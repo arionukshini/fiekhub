@@ -26,7 +26,7 @@ function LoginPage() {
     setStatus('')
 
     if (!hasSupabaseConfig) {
-      setError('Supabase is not configured yet.')
+      setError('Supabase nuk është konfiguruar ende.')
       return
     }
 
@@ -44,22 +44,22 @@ function LoginPage() {
       return
     }
 
-    setStatus('Signed in successfully.')
+    setStatus('U kyçe me sukses.')
     navigate('/dashboard')
   }
 
   return (
     <div className="app-shell auth-shell">
       <AuthCardShell
-        copy="Sign in with your student account to reach your FIEK Hub dashboard."
-        eyebrow="Student access"
-        title="Login"
+        copy="Kyçu me llogarinë studentore për të hapur panelin e FIEK Hub."
+        eyebrow="Qasja studentore"
+        title="Kyçu"
         titleId="login-title"
       >
           {!hasSupabaseConfig && (
             <p className="alert alert-warning">
-              Supabase environment variables are missing. Add them before using
-              authentication.
+              Mungojnë variablat e Supabase. Shtoji para se të përdorësh
+              autentikimin.
             </p>
           )}
 
@@ -83,9 +83,9 @@ function LoginPage() {
 
             <div className="auth-field">
               <div className="auth-label-row">
-                <label htmlFor="login-password">Password</label>
+                <label htmlFor="login-password">Fjalëkalimi</label>
                 <Link className="auth-inline-link" to="/forgot-password">
-                  Forgot password?
+                  E harrove fjalëkalimin?
                 </Link>
               </div>
               <div className="auth-input-shell">
@@ -95,13 +95,13 @@ function LoginPage() {
                   id="login-password"
                   name="password"
                   onChange={(event) => setPassword(event.target.value)}
-                  placeholder="Enter your password"
+                  placeholder="Shkruaj fjalëkalimin"
                   required
                   type={showPassword ? 'text' : 'password'}
                   value={password}
                 />
                 <button
-                  aria-label={showPassword ? 'Hide password' : 'Show password'}
+                  aria-label={showPassword ? 'Fshih fjalëkalimin' : 'Shfaq fjalëkalimin'}
                   className="password-toggle"
                   onClick={() => setShowPassword((current) => !current)}
                   type="button"
@@ -131,7 +131,7 @@ function LoginPage() {
                     key="loading"
                   >
                     <span className="auth-spinner" aria-hidden="true" />
-                    Signing in...
+                    Duke u kyçur...
                   </motion.span>
                 ) : (
                   <motion.span
@@ -141,7 +141,7 @@ function LoginPage() {
                     initial={{ opacity: 0 }}
                     key="ready"
                   >
-                    Login
+                    Kyçu
                     <ArrowRight aria-hidden="true" size={17} />
                   </motion.span>
                 )}
@@ -150,7 +150,7 @@ function LoginPage() {
           </form>
 
           <p className="auth-switch">
-            New to FIEK Hub? <Link to="/register">Create an account</Link>
+            I ri në FIEK Hub? <Link to="/register">Krijo një llogari</Link>
           </p>
       </AuthCardShell>
     </div>

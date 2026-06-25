@@ -26,9 +26,9 @@ function LandingPage() {
     ? [
         {
           icon: BookOpen,
-          label: 'Provime pranuese',
-          copy: 'Materialet sipas viteve',
-          to: '/provime-pranuese',
+          label: 'Materialet',
+          copy: 'Lëndët sipas viteve',
+          to: '/materials',
         },
         {
           icon: UserRound,
@@ -110,7 +110,7 @@ function LandingPage() {
                 whileTap="tap"
               >
                 <LayoutDashboard aria-hidden="true" size={18} />
-                Open Dashboard
+                Hap panelin
                 <ArrowRight aria-hidden="true" size={17} />
               </MotionLink>
             ) : (
@@ -122,7 +122,7 @@ function LandingPage() {
                   whileHover="hover"
                   whileTap="tap"
                 >
-                  Login
+                  Kyçu
                   <ArrowRight aria-hidden="true" size={17} />
                 </MotionLink>
                 <MotionLink
@@ -132,7 +132,7 @@ function LandingPage() {
                   whileHover="hover"
                   whileTap="tap"
                 >
-                  Register
+                  Regjistrohu
                 </MotionLink>
               </>
             )}

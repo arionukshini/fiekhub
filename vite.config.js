@@ -6,6 +6,10 @@ export default defineConfig({
   base: '/fiekhub/',
   plugins: [react()],
   server: {
-    allowedHosts: ['shaggy-rabbits-rest.loca.lt'],
+    allowedHosts: [
+      'shaggy-rabbits-rest.loca.lt',
+      'tangy-papers-hang.loca.lt',
+      'loud-otters-run.loca.lt',
+    ],
   },
 })

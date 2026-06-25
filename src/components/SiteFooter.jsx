@@ -3,11 +3,11 @@ import AnimatedSection, { AnimatedItem } from './AnimatedSection.jsx'
 import FiekHubBooksLogo from './FiekHubBooksLogo.jsx'
 
 const footerLinks = [
-  { label: 'About', to: '/about' },
-  { label: 'Contact', to: '/contact' },
-  { label: 'Privacy', to: '/privacy' },
-  { label: 'Terms', to: '/terms' },
-  { label: 'FAQ', to: '/faq' },
+  { label: 'Rreth nesh', to: '/about' },
+  { label: 'Kontakti', to: '/contact' },
+  { label: 'Privatësia', to: '/privacy' },
+  { label: 'Kushtet', to: '/terms' },
+  { label: 'Pyetje', to: '/faq' },
 ]
 
 function SiteFooter() {
@@ -19,11 +19,11 @@ function SiteFooter() {
         </span>
         <div>
           <strong>FIEK Hub</strong>
-          <p>Student tools, materials, and account access in one place.</p>
+          <p>Mjetet, materialet dhe llogaria studentore në një vend.</p>
         </div>
       </AnimatedItem>
 
-      <AnimatedItem as="nav" className="footer-links" aria-label="Footer navigation">
+      <AnimatedItem as="nav" className="footer-links" aria-label="Navigimi në fund të faqes">
         {footerLinks.map((link) => (
           <Link key={link.to} to={link.to}>
             {link.label}

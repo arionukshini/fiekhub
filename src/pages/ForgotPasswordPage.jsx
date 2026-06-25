@@ -23,7 +23,7 @@ function ForgotPasswordPage() {
     setStatus('')
 
     if (!hasSupabaseConfig) {
-      setError('Supabase is not configured yet.')
+      setError('Supabase nuk është konfiguruar ende.')
       return
     }
 
@@ -44,21 +44,21 @@ function ForgotPasswordPage() {
       return
     }
 
-    setStatus('Password reset link sent. Check your email for the next step.')
+    setStatus('Lidhja për rivendosjen e fjalëkalimit u dërgua në email.')
   }
 
   return (
     <div className="app-shell auth-shell">
       <AuthCardShell
-        copy="Enter your student email and we will send you a secure password reset link."
-        eyebrow="Account recovery"
-        title="Forgot Password"
+        copy="Shkruaj email-in studentor dhe do të të dërgojmë lidhjen për rivendosjen e fjalëkalimit."
+        eyebrow="Rikuperimi i llogarisë"
+        title="Harrove fjalëkalimin?"
         titleId="forgot-password-title"
       >
         {!hasSupabaseConfig && (
           <p className="alert alert-warning">
-            Supabase environment variables are missing. Add them before using
-            authentication.
+            Mungojnë variablat e Supabase. Shtoji para se të përdorësh
+            autentikimin.
           </p>
         )}
 
@@ -100,7 +100,7 @@ function ForgotPasswordPage() {
                   key="loading"
                 >
                   <span className="auth-spinner" aria-hidden="true" />
-                  Sending link...
+                  Duke dërguar lidhjen...
                 </motion.span>
               ) : (
                 <motion.span
@@ -110,7 +110,7 @@ function ForgotPasswordPage() {
                   initial={{ opacity: 0 }}
                   key="ready"
                 >
-                  Send reset link
+                  Dërgo lidhjen
                   <ArrowRight aria-hidden="true" size={17} />
                 </motion.span>
               )}
@@ -119,12 +119,12 @@ function ForgotPasswordPage() {
         </form>
 
         <p className="auth-switch">
-          Remembered it? <Link to="/login">Back to login</Link>
+          Të kujtohet fjalëkalimi? <Link to="/login">Kthehu te kyçja</Link>
         </p>
 
         <p className="auth-note">
           <KeyRound aria-hidden="true" size={16} />
-          Use the same email address you registered with.
+          Përdor të njëjtin email me të cilin je regjistruar.
         </p>
       </AuthCardShell>
     </div>

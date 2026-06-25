@@ -1,7 +1,7 @@
 export const studyYears = [
-  { label: 'First year', value: 'first-year' },
-  { label: 'Second year', value: 'second-year' },
-  { label: 'Third year', value: 'third-year' },
+  { label: 'Viti i parë', value: 'first-year' },
+  { label: 'Viti i dytë', value: 'second-year' },
+  { label: 'Viti i tretë', value: 'third-year' },
   { label: 'Master', value: 'master' },
 ]
 
@@ -43,7 +43,7 @@ export function getGroupsForStudy(departmentValue, yearValue) {
   }
 
   return Array.from({ length: groupCount }, (_, index) => ({
-    label: `Group ${index + 1}`,
+    label: `Grupi ${index + 1}`,
     value: `group-${index + 1}`,
   }))
 }

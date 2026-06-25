@@ -1,0 +1,1489 @@
+{
+  "legend": [
+    {
+      "color": "red",
+      "text": "Me ngjyrë të kuqe janë temat nga të cilat jeni të liruar edhe në test, edhe në provim."
+    },
+    {
+      "color": "green",
+      "text": "Me ngjyrë të gjelbër janë temat nga të cilat jeni të liruar në test, por jo në provim."
+    },
+    {
+      "color": "black",
+      "text": "Me të zezë janë temat që i keni edhe në test, edhe në provim."
+    }
+  ],
+  "documents": [
+    {
+      "id": "testi-i-pare",
+      "title": "Temat për testin e parë",
+      "file": "Temat nga Fizika per inxhinieri 1 per testin e pare.docx",
+      "paragraphs": [
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Metodat e hulumtimeve",
+              "color": "red"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Studimi cilësor",
+              "color": "red"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Studimi sasior ",
+              "color": "red"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Sistemi SI, nënfishat dhe shumëfishit ",
+              "color": "black"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Madhësitë fizike ",
+              "color": "red"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Madhësitë skalare dhe vektoriale",
+              "color": "red"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Mbledhja dhe zbritja e vektorëve  ",
+              "color": "red"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Mbledhja e vektorëve sipas paralelogramit",
+              "color": "red"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Mbledhja e vektorëve sipas poligonit",
+              "color": "red"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Zbritja e vektorëve",
+              "color": "red"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Komponentët e vektorit",
+              "color": "red"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Teoremën e kosinusit dhe teoremën e sinusit ",
+              "color": "red"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Prodhimi i vektorëve ",
+              "color": "red"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Elementet e lëvizjes",
+              "color": "green"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Vektori i pozitës, zhvendosja dhe rruga",
+              "color": "green"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Koha dhe intervali kohor",
+              "color": "green"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Shpejtësia lineare",
+              "color": "green"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Nxitimi linear",
+              "color": "green"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Perioda dhe frekuenca",
+              "color": "green"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Kuptimi i vektorit të shpejtësisë dhe nxitimit ",
+              "color": "green"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Nxitimi mesatar dhe i çastit",
+              "color": "green"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Ndarja e lëvizjeve ",
+              "color": "green"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Lëvizje e njëtrajtshme drejtvizore  ",
+              "color": "black"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Lëvizje e njëtrajtshme e ndryshueshme drejtvizore  ",
+              "color": "black"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Lëvizje rrethore njëtrajtësisht e ndryshueshme ",
+              "color": "black"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Lidhja e nxitimi tangjencial dhe radial",
+              "color": "red"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Lëvizja relative",
+              "color": "red"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Ligji klasik i mbledhjeve të shpejtësive",
+              "color": "red"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Rënia e lirë ",
+              "color": "black"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Hedhja horizontale",
+              "color": "black"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Hedhja normale",
+              "color": "black"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Hedhja vertikale",
+              "color": "black"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Hedhja e pjerrët ",
+              "color": "black"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Ligji i parë i mekanikes (Njutonit) ose ligji i inercisë ",
+              "color": "black"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Ligji i dytë i mekanikes (Njutonit) ose ligji i forcës",
+              "color": "black"
+            }
+          ]
+        },
+        {
+          "style": "Normal (Web)",
+          "runs": [
+            {
+              "text": "Ligji i tretë i mekanikes (Njutonit) ose ligji i veprimit dhe i kundërveprimit ",
+              "color": "black"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Masa lineare",
+              "color": "red"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Masa sipërfaqësore ",
+              "color": "red"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Densiteti (masa vëllimore)",
+              "color": "red"
+            },
+            {
+              "text": " ",
+              "color": "black"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Sasia e lëvizjes ",
+              "color": "black"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Ligji i ruajtjes sasisë së lëvizjes ",
+              "color": "black"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Impulsi i forcës ",
+              "color": "black"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Forca e rëndimit ",
+              "color": "black"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Pesha e trupit",
+              "color": "black"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Pesha specifike",
+              "color": "green"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Shtypja     ",
+              "color": "black"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Forca e fërkimit ",
+              "color": "black"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Sistemi inercial",
+              "color": "red"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Qendra e masës dhe qendra rëndesës ",
+              "color": "red"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Lëvizja e qendrës së masës së sistemit të izoluar të trupit",
+              "color": "red"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Dinamika e lëvizjes rrotulluese",
+              "color": "black"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Momenti i forcës",
+              "color": "black"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Momenti i inercisë ",
+              "color": "black"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Teorema e Shtajnerit",
+              "color": "red"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Momenti i sasisë së lëvizjes ",
+              "color": "black"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Ligji i dytë i mekanikës për rrotullim",
+              "color": "black"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Ligji i ruajtjes së momenti të sasisë së lëvizjes",
+              "color": "black"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Forca centripetale dhe centrifugale",
+              "color": "black"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Rrotullimi i dy trupave rreth qendrës së përbashkët të masës ",
+              "color": "red"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Puna mekanike e lëvizjes translative ",
+              "color": "black"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Puna mekanike e rrotullimit",
+              "color": "black"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Fuqia e lëvizjes translative",
+              "color": "black"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Fuqia e lëvizjes rrotulluese",
+              "color": "black"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Koeficienti i veprimit të dobishëm ",
+              "color": "black"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Energjia kinetike e translacionit ",
+              "color": "black"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Energjia kinetike e rrotullimit ",
+              "color": "black"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Energjia potenciale e rendimit  ",
+              "color": "black"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Energjia potenciale të susta elastike",
+              "color": "red"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Ligji i ruajtjes së energjisë  ",
+              "color": "black"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Ligji i Njutonit për gravitetin",
+              "color": "black"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Pesha e trupave. Pesha e trupit që lëvizë nëpër vertikale ",
+              "color": "black"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Vartësia e nxitimit të rendimit tokësor nga lartësia",
+              "color": "black"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Lëvizja e Tokës rreth Diellit",
+              "color": "black"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Nxitimi qe merr Hëna nga forca tërheqëse e Tokës",
+              "color": "green"
+            },
+            {
+              "text": "   ",
+              "color": "black"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Ligjet e Keplerit (I, II dhe III)",
+              "color": "black"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Shpejtësia e parë, e dytë dhe e tretë kozmike  ",
+              "color": "black"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Perioda e rrotullimit te satelitit ",
+              "color": "black"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Satelitët gjeostacionarë  ",
+              "color": "green"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Masa e Diellit dhe Tokës. ",
+              "color": "black"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "testi-i-dyte",
+      "title": "Temat për testin e dytë",
+      "file": "Temat nga Fizika per inxhinieri 1 per testin e dyte.docx",
+      "paragraphs": [
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Shtypja atmosferike",
+              "color": "black"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Përhapja e forcës në fluide ",
+              "color": "black"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Ligji i Paskalit. Shtypja hidrostatike",
+              "color": "black"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Shtypja mekanike ",
+              "color": "black"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Shtypja hidrostatike",
+              "color": "black"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Ligji i Arkimedit",
+              "color": "black"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Ekuacioni i kontinuitetit",
+              "color": "black"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Ekuacioni i Bernulit",
+              "color": "black"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Teorema e Toriçelit ",
+              "color": "black"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Gypi i Pitos",
+              "color": "black"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Paradoksi aerodinamik",
+              "color": "black"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Viskoziteti i fluideve. Formula e Stoksit ",
+              "color": "green"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Dukuritë termike  ",
+              "color": "red"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Sasia e materies ",
+              "color": "red"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Masa molare ",
+              "color": "red"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Njësia atomike e masës ",
+              "color": "red"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Masa atomike",
+              "color": "red"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Masa atomike relative",
+              "color": "red"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Masa molekulare ",
+              "color": "red"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Masa molekulare relative",
+              "color": "red"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Masa molare dhe masa molare relative",
+              "color": "red"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Vëllimi molar dhe vëllimi specifik",
+              "color": "red"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Vëllimi molar standard",
+              "color": "red"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Ligji i Avogadros",
+              "color": "red"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Konstantja e Avogadros",
+              "color": "red"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Konstantja e Loshmidit ",
+              "color": "red"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Temperatura dhe termometrat",
+              "color": "black"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Shkallët termometrike ",
+              "color": "black"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Lëvizja e molekulave dhe forcat molekulare ",
+              "color": "black"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Forcat molekulare",
+              "color": "black"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Shkallët e lirisë ",
+              "color": "red"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Teoria kinetike molekulare e gazit",
+              "color": "black"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Shtypja e molekulave në muret e enës",
+              "color": "black"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Energjia kinetike mesatare e molekulave ",
+              "color": "black"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Shpejtësia kuadratike mesatare e molekulave ",
+              "color": "black"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Ekuacioni i gjendjes së gazit ideal",
+              "color": "black"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Ligjet e gazeve ideale",
+              "color": "black"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Proceset izotermike-Ligji i Bojl-Mariotit",
+              "color": "black"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Proceset izobarike-Ligji i Gje-Lisakut ",
+              "color": "black"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Proceset izohotrike-Ligji i Sharlit",
+              "color": "black"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Avulli i ngopur dhe i pangopur",
+              "color": "red"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Lagështia e ajrit",
+              "color": "red"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Lagështia maksimale a ajrit",
+              "color": "red"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Lagështia relative",
+              "color": "red"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Tensioni sipërfaqësor",
+              "color": "green"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Dukuria kapilare",
+              "color": "green"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Lagia dhe jo-lagia",
+              "color": "green"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Bymimi termik linear i trupave",
+              "color": "black"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Bymimi termik sipërfaqësor i trupave",
+              "color": "black"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Bymimi termik vëllimor i trupave",
+              "color": "black"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Vartësia e densitetit të trupave nga temperatura ",
+              "color": "black"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Anomalia e zgjerimit të ujit ",
+              "color": "black"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Tensioni mekanik-termik i trupave të ngurtë",
+              "color": "black"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Ndërrimi i gjendjeve agregate ",
+              "color": "black"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Shkrirja dhe ngrirja ",
+              "color": "red"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Avullimi dhe kondensimi",
+              "color": "red"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Ajrosja",
+              "color": "red"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Sublimimi ",
+              "color": "red"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Bilanci energjetik ",
+              "color": "red"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Termodinamika",
+              "color": "black"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Energjia e brendshme e trupit",
+              "color": "black"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Sasia e nxehtësia",
+              "color": "black"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Nxehtësia specifike dhe molare",
+              "color": "black"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Termokapaciteti",
+              "color": "black"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Termokapaciteti specifik dhe molar",
+              "color": "black"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Bilanci energjetik i ekuilibrit termik",
+              "color": "black"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Parimi i parë i termodinamikës",
+              "color": "black"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Termokapaciteti i gazeve ideale",
+              "color": "black"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Madhësitë termodinamike dhe shkallët e lirisë ",
+              "color": "black"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Ekuacionet e Puasonit",
+              "color": "red"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Ekuacionet i parë Puasonit",
+              "color": "red"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Ekuacionet i dytë Puasonit",
+              "color": "red"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Ekuacionet i tretë Puasonit",
+              "color": "red"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Proceset termodinamike",
+              "color": "black"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Puna e gazit të mbyllur",
+              "color": "black"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Puna e gazit të mbyllur gjatë procesit izohorik",
+              "color": "black"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Puna e gazit të mbyllur gjatë procesit izobarik",
+              "color": "black"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Puna e gazit të mbyllur gjatë procesit izotermik",
+              "color": "black"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Puna e gazit të mbyllur gjatë procesit adiabatik",
+              "color": "black"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Cikli i Karnos",
+              "color": "red"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Entropia ",
+              "color": "red"
+            }
+          ]
+        },
+        {
+          "style": "Normal",
+          "runs": [
+            {
+              "text": "Parimi i dytë i termodinamikës",
+              "color": "red"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

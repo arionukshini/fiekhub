@@ -6,10 +6,10 @@ function ThemeToggle() {
 
   return (
     <button
-      aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
+      aria-label={isDark ? 'Kalo në temën e çelët' : 'Kalo në temën e errët'}
       className="theme-toggle"
       onClick={toggleTheme}
-      title={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
+      title={isDark ? 'Kalo në temën e çelët' : 'Kalo në temën e errët'}
       type="button"
     >
       <Icon
