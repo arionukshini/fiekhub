@@ -1,8 +1,16 @@
 import { motion } from 'framer-motion'
+import {
+  ArrowRight,
+  BookOpen,
+  CalendarDays,
+  Home,
+  Sparkles,
+  UserRound,
+} from 'lucide-react'
 import { Link } from 'react-router-dom'
+import SiteFooter from '../components/SiteFooter.jsx'
 import { useAuth } from '../hooks/useAuth.js'
 import {
-  interactiveRevealItem,
   revealItem,
   revealViewport,
   staggerContainer,
@@ -27,71 +35,89 @@ function DashboardPage() {
           viewport={revealViewport}
           whileInView="show"
         >
-          <motion.p className="eyebrow" variants={revealItem}>
-            Dashboard
+          <span className="hero-orb hero-orb-left" aria-hidden="true" />
+          <span className="hero-orb hero-orb-right" aria-hidden="true" />
+
+          <motion.p className="hero-badge" variants={revealItem}>
+            <Sparkles aria-hidden="true" size={15} />
+            Hapësira jote studentore
           </motion.p>
           <motion.h1 id="dashboard-title" variants={revealItem}>
-            Welcome, {firstName}
+            Mirë se erdhe,
+            <span> {firstName}.</span>
           </motion.h1>
-          <motion.p variants={revealItem}>
-            This is the first protected dashboard template. Schedule, materials,
-            and notifications will be connected later.
+          <motion.p className="dashboard-hero-copy" variants={revealItem}>
+            Vazhdo aty ku e le, gjej materialet shpejt ose përditëso të dhënat
+            e profilit tënd.
           </motion.p>
-        </motion.section>
 
-        <motion.section
-          aria-label="Dashboard overview"
-          className="dashboard-grid"
-          initial="hidden"
-          variants={staggerContainer}
-          viewport={revealViewport}
-          whileInView="show"
-        >
-          <motion.article
-            className="dashboard-card"
-            variants={interactiveRevealItem}
-            whileHover="hover"
-            whileTap="tap"
-          >
-            <span className="card-label">Today</span>
-            <h2>No verified classes yet</h2>
-            <p>Class schedule data will appear here after it is reviewed.</p>
-          </motion.article>
-
-          <motion.article
-            className="dashboard-card"
-            variants={interactiveRevealItem}
-            whileHover="hover"
-            whileTap="tap"
-          >
-            <span className="card-label">Materials</span>
-            <h2>Provime pranuese</h2>
-            <p>Shiko PDF-at e provimeve pranuese te organizuara sipas viteve.</p>
+          <motion.div className="dashboard-primary-action" variants={revealItem}>
             <MotionLink
-              className="dashboard-card-link"
+              className="button button-primary"
               to="/provime-pranuese"
               variants={subtleScale}
               whileHover="hover"
               whileTap="tap"
             >
-              Open section
+              <BookOpen aria-hidden="true" size={18} />
+              Hap materialet
+              <ArrowRight aria-hidden="true" size={17} />
             </MotionLink>
-          </motion.article>
+          </motion.div>
 
-          <motion.article
-            className="dashboard-card"
-            variants={interactiveRevealItem}
-            whileHover="hover"
-            whileTap="tap"
+          <motion.div
+            aria-label="Qasje e shpejtë"
+            className="dashboard-shortcuts"
+            variants={revealItem}
           >
-            <span className="card-label">Profile</span>
-            <h2>Student details</h2>
-            <p>
-              Your department, year, and group control the student content
-              shown here.
-            </p>
-          </motion.article>
+            <MotionLink
+              className="dashboard-shortcut"
+              to="/provime-pranuese"
+              variants={subtleScale}
+              whileHover="hover"
+              whileTap="tap"
+            >
+              <BookOpen aria-hidden="true" size={20} />
+              <span>
+                <strong>Provime pranuese</strong>
+                <small>PDF sipas viteve</small>
+              </span>
+            </MotionLink>
+            <MotionLink
+              className="dashboard-shortcut"
+              to="/account"
+              variants={subtleScale}
+              whileHover="hover"
+              whileTap="tap"
+            >
+              <UserRound aria-hidden="true" size={20} />
+              <span>
+                <strong>Profili im</strong>
+                <small>Detajet studentore</small>
+              </span>
+            </MotionLink>
+            <MotionLink
+              className="dashboard-shortcut"
+              to="/"
+              variants={subtleScale}
+              whileHover="hover"
+              whileTap="tap"
+            >
+              <Home aria-hidden="true" size={20} />
+              <span>
+                <strong>Ballina</strong>
+                <small>Kthehu në fillim</small>
+              </span>
+            </MotionLink>
+          </motion.div>
+
+          <motion.div className="dashboard-status" variants={revealItem}>
+            <CalendarDays aria-hidden="true" size={17} />
+            <span>Orari dhe njoftimet do të shtohen së shpejti.</span>
+          </motion.div>
         </motion.section>
+
+        <SiteFooter />
       </main>
     </div>
   )
