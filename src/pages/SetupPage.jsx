@@ -68,12 +68,12 @@ function SetupPage() {
     setError('')
 
     if (!hasSupabaseConfig || !supabase) {
-      setError('Supabase is not configured yet.')
+      setError('Supabase nuk është konfiguruar ende.')
       return
     }
 
     if (!studyDepartment || !studyYear || !selectedGroup) {
-      setError('Choose your department, year, and group to continue.')
+      setError('Zgjedh departamentin, vitin dhe grupin për të vazhduar.')
       return
     }
 
@@ -121,11 +121,11 @@ function SetupPage() {
                 key="department-step"
                 transition={{ duration: 0.18 }}
               >
-                <p className="setup-kicker">Step 1 of 3 - Required</p>
-                <h1 id="setup-title">Complete your student setup</h1>
+                <p className="setup-kicker">Hapi 1 nga 3 - I detyrueshëm</p>
+                <h1 id="setup-title">Plotëso të dhënat studentore</h1>
                 <p className="setup-copy">
-                  Choose your department so FIEK Hub can prepare the correct
-                  study options.
+                  Zgjedh departamentin që FIEK Hub të përgatisë opsionet e
+                  duhura të studimit.
                 </p>
                 <div className="setup-option-grid" role="radiogroup">
                   {studyDepartments.map((department, index) => (
@@ -152,10 +152,10 @@ function SetupPage() {
                 key="year-step"
                 transition={{ duration: 0.18 }}
               >
-                <p className="setup-kicker">Step 2 of 3 - Required</p>
-                <h1>Choose your study year</h1>
+                <p className="setup-kicker">Hapi 2 nga 3 - I detyrueshëm</p>
+                <h1>Zgjedh vitin e studimit</h1>
                 <p className="setup-copy">
-                  Select your current year in {selectedDepartment?.label}.
+                  Zgjedh vitin aktual në {selectedDepartment?.label}.
                 </p>
                 <div className="setup-option-grid" role="radiogroup">
                   {studyYears.map((year, index) => (
@@ -181,12 +181,12 @@ function SetupPage() {
                 key="group-step"
                 transition={{ duration: 0.18 }}
               >
-                <p className="setup-kicker">Step 3 of 3 - Required</p>
-                <h1>Choose your group</h1>
+                <p className="setup-kicker">Hapi 3 nga 3 - I detyrueshëm</p>
+                <h1>Zgjedh grupin</h1>
                 <p className="setup-copy">
-                  {selectedDepartment?.label}, {selectedYear?.label} has{' '}
+                  {selectedDepartment?.label}, {selectedYear?.label} ka{' '}
                   {groups.length}{' '}
-                  {groups.length === 1 ? 'group' : 'groups'} available.
+                  {groups.length === 1 ? 'grup' : 'grupe'} në dispozicion.
                 </p>
                 <div className="setup-option-grid" role="radiogroup">
                   {groups.map((group, index) => (
@@ -213,7 +213,7 @@ function SetupPage() {
             type="button"
           >
             <ArrowLeft aria-hidden="true" size={17} />
-            Back
+            Kthehu
           </button>
 
           <div className="setup-summary" aria-live="polite">
@@ -228,7 +228,11 @@ function SetupPage() {
             onClick={moveNext}
             type="button"
           >
-            {saving ? 'Finishing...' : step < 3 ? 'Next' : 'Finish setup'}
+            {saving
+              ? 'Duke përfunduar...'
+              : step < 3
+                ? 'Vazhdo'
+                : 'Përfundo konfigurimin'}
             {step < 3 ? (
               <ArrowRight aria-hidden="true" size={17} />
             ) : (

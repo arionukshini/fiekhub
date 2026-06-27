@@ -6,19 +6,19 @@ import SiteFooter from '../components/SiteFooter.jsx'
 
 const faqs = [
   {
-    question: 'Is FIEK Hub an official FIEK platform?',
+    question: 'A është FIEK Hub platformë zyrtare e FIEK-ut?',
     answer:
-      'Not right now. FIEK Hub is an independent student project unless it is officially adopted or announced otherwise.',
+      'Jo për momentin. FIEK Hub është projekt i pavarur studentor, përveç nëse miratohet ose shpallet zyrtarisht ndryshe.',
   },
   {
-    question: 'Why do I have to choose my department, year, and group?',
+    question: 'Pse duhet ta zgjedh departamentin, vitin dhe grupin?',
     answer:
-      'The setup step lets the app prepare future schedule, materials, and dashboard sections around the right student context.',
+      'Ky hap i konfigurimit i ndihmon aplikacionit të përgatisë më vonë orarin, materialet dhe panelin sipas të dhënave të tua studentore.',
   },
   {
-    question: "Why can't I delete my account yet?",
+    question: 'Pse nuk mund ta fshij ende llogarinë?',
     answer:
-      'Account deletion needs a safe server-side endpoint so user data can be removed correctly. Until that is finished, deletion requests can be sent through Contact.',
+      'Fshirja e llogarisë kërkon një endpoint të sigurt në server që të dhënat të largohen si duhet. Deri atëherë, kërkesat për fshirje mund të dërgohen përmes Kontaktit.',
   },
 ]
 
@@ -29,15 +29,15 @@ function FaqPage() {
     <div className="app-shell">
       <main className="info-page">
         <AnimatedSection className="info-hero">
-          <AnimatedItem as="p" className="eyebrow">FAQ</AnimatedItem>
-          <AnimatedItem as="h1">Frequently Asked Questions</AnimatedItem>
+          <AnimatedItem as="p" className="eyebrow">Pyetje</AnimatedItem>
+          <AnimatedItem as="h1">Pyetjet e shpeshta</AnimatedItem>
           <AnimatedItem as="p">
-            Short answers for the current version of FIEK Hub. This page can
-            grow as more student workflows are added.
+            Përgjigje të shkurtra për versionin aktual të FIEK Hub. Kjo faqe
+            mund të zgjerohet kur shtohen rrjedha të reja studentore.
           </AnimatedItem>
         </AnimatedSection>
 
-        <AnimatedSection className="faq-list" aria-label="Frequently asked questions">
+        <AnimatedSection className="faq-list" aria-label="Pyetjet e shpeshta">
           {faqs.map((item) => {
             const isOpen = openQuestion === item.question
 

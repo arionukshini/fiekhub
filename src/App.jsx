@@ -3,7 +3,9 @@ import { Navigate, Route, Routes, useLocation } from 'react-router-dom'
 import ProtectedRoute from './components/ProtectedRoute.jsx'
 import SiteHeader from './components/SiteHeader.jsx'
 import ThemeToggle from './components/ThemeToggle.jsx'
+import { useAuth } from './hooks/useAuth.js'
 import { pageVariants } from './lib/motion.js'
+import { shouldShowAcceptanceExams } from './lib/userPreferences.js'
 import AcceptanceExamsPage from './pages/AcceptanceExamsPage.jsx'
 import AccountPage from './pages/AccountPage.jsx'
 import AboutPage from './pages/AboutPage.jsx'
@@ -54,7 +56,7 @@ function App() {
               path="/provime-pranuese"
               element={
                 <ProtectedRoute>
-                  <AcceptanceExamsPage />
+                  <AcceptanceExamsRoute />
                 </ProtectedRoute>
               }
             />
@@ -92,6 +94,16 @@ function App() {
       {!isSetupRoute && <ThemeToggle />}
     </MotionConfig>
   )
+}
+
+function AcceptanceExamsRoute() {
+  const { user } = useAuth()
+
+  if (!shouldShowAcceptanceExams(user)) {
+    return <Navigate to="/materials" replace />
+  }
+
+  return <AcceptanceExamsPage />
 }
 
 export default App

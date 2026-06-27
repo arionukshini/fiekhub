@@ -6,11 +6,11 @@ import { useAuth } from '../hooks/useAuth.js'
 import { hasSupabaseConfig, supabase } from '../lib/supabaseClient.js'
 
 const contactCategories = [
-  { label: 'General', value: 'general' },
-  { label: 'Bug report', value: 'bug' },
-  { label: 'Materials', value: 'materials' },
-  { label: 'Account', value: 'account' },
-  { label: 'Privacy', value: 'privacy' },
+  { label: 'Të përgjithshme', value: 'general' },
+  { label: 'Raportim problemi', value: 'bug' },
+  { label: 'Materialet', value: 'materials' },
+  { label: 'Llogaria', value: 'account' },
+  { label: 'Privatësia', value: 'privacy' },
 ]
 
 function ContactPage() {
@@ -30,7 +30,7 @@ function ContactPage() {
     setStatus('')
 
     if (!hasSupabaseConfig || !supabase) {
-      setError('Contact form is not configured yet.')
+      setError('Forma e kontaktit nuk është konfiguruar ende.')
       return
     }
 
@@ -52,18 +52,19 @@ function ContactPage() {
 
     setSubject('')
     setMessage('')
-    setStatus('Message sent. It is now stored for review.')
+    setStatus('Mesazhi u dërgua dhe është ruajtur për shqyrtim.')
   }
 
   return (
     <div className="app-shell">
       <main className="info-page">
         <AnimatedSection className="info-hero">
-          <AnimatedItem as="p" className="eyebrow">Contact</AnimatedItem>
-          <AnimatedItem as="h1">Contact FIEK Hub</AnimatedItem>
+          <AnimatedItem as="p" className="eyebrow">Kontakti</AnimatedItem>
+          <AnimatedItem as="h1">Kontakto FIEK Hub</AnimatedItem>
           <AnimatedItem as="p">
-            Send feedback, report missing materials, or ask about your account.
-            Messages are stored securely in the project database for review.
+            Dërgo komente, raporto materiale që mungojnë ose pyet për llogarinë
+            tënde. Mesazhet ruhen në bazën e të dhënave të projektit për
+            shqyrtim.
           </AnimatedItem>
         </AnimatedSection>
 
@@ -71,13 +72,13 @@ function ContactPage() {
           <AnimatedItem as="form" className="contact-form" onSubmit={handleSubmit}>
             <div className="account-choice-grid">
               <div className="auth-field">
-                <label htmlFor="contact-name">Name</label>
+                <label htmlFor="contact-name">Emri</label>
                 <div className="auth-input-shell">
                   <MessageSquare aria-hidden="true" size={18} />
                   <input
                     id="contact-name"
                     onChange={(event) => setName(event.target.value)}
-                    placeholder="Your name"
+                    placeholder="Emri yt"
                     required
                     type="text"
                     value={name}
@@ -103,7 +104,7 @@ function ContactPage() {
 
             <div className="account-choice-grid">
               <div className="auth-field">
-                <label htmlFor="contact-category">Category</label>
+                <label htmlFor="contact-category">Kategoria</label>
                 <select
                   className="account-select"
                   id="contact-category"
@@ -119,7 +120,7 @@ function ContactPage() {
               </div>
 
               <div className="auth-field">
-                <label htmlFor="contact-subject">Subject</label>
+                <label htmlFor="contact-subject">Subjekti</label>
                 <div className="auth-input-shell">
                   <MessageSquare aria-hidden="true" size={18} />
                   <input
@@ -127,7 +128,7 @@ function ContactPage() {
                     maxLength="160"
                     minLength="3"
                     onChange={(event) => setSubject(event.target.value)}
-                    placeholder="What is this about?"
+                    placeholder="Për çka bëhet fjalë?"
                     required
                     type="text"
                     value={subject}
@@ -137,14 +138,14 @@ function ContactPage() {
             </div>
 
             <div className="auth-field">
-              <label htmlFor="contact-message">Message</label>
+              <label htmlFor="contact-message">Mesazhi</label>
               <textarea
                 className="contact-textarea"
                 id="contact-message"
                 maxLength="4000"
                 minLength="10"
                 onChange={(event) => setMessage(event.target.value)}
-                placeholder="Write your message..."
+                placeholder="Shkruaj mesazhin..."
                 required
                 value={message}
               />
@@ -154,17 +155,17 @@ function ContactPage() {
             {status && <p className="alert alert-success">{status}</p>}
 
             <button className="button button-primary contact-submit" disabled={submitting}>
-              {submitting ? 'Sending...' : 'Send message'}
+              {submitting ? 'Duke dërguar...' : 'Dërgo mesazhin'}
               <Send aria-hidden="true" size={17} />
             </button>
           </AnimatedItem>
 
           <AnimatedItem as="aside" className="info-panel contact-note">
-            <h2>Before sending</h2>
+            <h2>Para se ta dërgosh</h2>
             <p>
-              Do not submit passwords, private documents, payment information,
-              or sensitive personal data. For account issues, include the email
-              address connected to your FIEK Hub account.
+              Mos dërgo fjalëkalime, dokumente private, informata pagese ose
+              të dhëna të ndjeshme personale. Për probleme me llogarinë,
+              përfshi email-in e lidhur me llogarinë tënde në FIEK Hub.
             </p>
           </AnimatedItem>
         </AnimatedSection>

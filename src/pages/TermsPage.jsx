@@ -1,75 +1,77 @@
 import AnimatedSection, { AnimatedItem } from '../components/AnimatedSection.jsx'
 import SiteFooter from '../components/SiteFooter.jsx'
 
-const updatedAt = 'June 23, 2026'
+const updatedAt = '23 qershor 2026'
 
 function TermsPage() {
   return (
     <div className="app-shell">
       <main className="info-page legal-page">
         <AnimatedSection className="info-hero">
-          <AnimatedItem as="p" className="eyebrow">Terms</AnimatedItem>
-          <AnimatedItem as="h1">Terms of Service</AnimatedItem>
+          <AnimatedItem as="p" className="eyebrow">Kushtet</AnimatedItem>
+          <AnimatedItem as="h1">Kushtet e shërbimit</AnimatedItem>
           <AnimatedItem as="p">
-            These terms explain the basic rules for using FIEK Hub. Last
-            updated: {updatedAt}.
+            Këto kushte shpjegojnë rregullat bazë për përdorimin e FIEK Hub.
+            Përditësimi i fundit: {updatedAt}.
           </AnimatedItem>
         </AnimatedSection>
 
         <AnimatedSection className="legal-content" item>
-          <h2>1. About the service</h2>
+          <h2>1. Rreth shërbimit</h2>
           <p>
-            FIEK Hub is an independent student web app for accounts, student
-            setup, and study materials. It is provided as a practical tool and
-            is not an official university system.
+            FIEK Hub është aplikacion web i pavarur studentor për llogari,
+            konfigurim studentor dhe materiale studimi. Ofron një mjet praktik
+            dhe nuk është sistem zyrtar universitar.
           </p>
 
-          <h2>2. Accounts</h2>
+          <h2>2. Llogaritë</h2>
           <p>
-            You are responsible for keeping your login credentials secure. Use a
-            real email address you control, and do not share your account with
-            others.
+            Ti je përgjegjës për t'i mbajtur të sigurta kredencialet e kyçjes.
+            Përdor një email real që e kontrollon dhe mos e ndaj llogarinë me
+            të tjerët.
           </p>
 
-          <h2>3. Acceptable use</h2>
+          <h2>3. Përdorimi i pranueshëm</h2>
           <ul>
-            <li>Do not attempt to break, overload, scrape, or bypass the app.</li>
-            <li>Do not submit abusive, misleading, unlawful, or harmful content.</li>
-            <li>Do not upload or send passwords or sensitive personal data through contact forms.</li>
-            <li>Use study materials responsibly and verify important academic information from official sources.</li>
+            <li>Mos tento ta prishësh, mbingarkosh, kopjosh masivisht ose anashkalosh aplikacionin.</li>
+            <li>Mos dërgo përmbajtje abuzive, mashtruese, të paligjshme ose të dëmshme.</li>
+            <li>Mos ngarko ose dërgo fjalëkalime apo të dhëna personale të ndjeshme përmes formave të kontaktit.</li>
+            <li>Përdori materialet e studimit me përgjegjësi dhe verifiko informacionet e rëndësishme akademike nga burimet zyrtare.</li>
           </ul>
 
-          <h2>4. Materials</h2>
+          <h2>4. Materialet</h2>
           <p>
-            Materials are provided to make studying easier. FIEK Hub does not
-            guarantee that every document is complete, current, or suitable for
-            every exam session.
+            Materialet ofrohen për ta lehtësuar studimin. FIEK Hub nuk
+            garanton që çdo dokument është i plotë, aktual ose i përshtatshëm
+            për çdo afat provimi.
           </p>
 
-          <h2>5. No academic guarantee</h2>
+          <h2>5. Pa garanci akademike</h2>
           <p>
-            The app does not guarantee grades, exam admission, official
-            schedules, or academic outcomes. Always confirm critical information
-            with official FIEK or university channels.
+            Aplikacioni nuk garanton nota, pranim në provime, orare zyrtare ose
+            rezultate akademike. Gjithmonë konfirmo informacionet kritike në
+            kanalet zyrtare të FIEK-ut ose universitetit.
           </p>
 
-          <h2>6. Availability</h2>
+          <h2>6. Disponueshmëria</h2>
           <p>
-            FIEK Hub may change, pause, or remove features as the project
-            develops. The service is provided on a best-effort basis.
+            FIEK Hub mund të ndryshojë, pauzojë ose largojë veçori gjatë
+            zhvillimit të projektit. Shërbimi ofrohet me përpjekjen më të mirë
+            të mundshme.
           </p>
 
-          <h2>7. Account deletion</h2>
+          <h2>7. Fshirja e llogarisë</h2>
           <p>
-            A self-service delete-account flow is planned but not complete yet.
-            Until then, account deletion requests can be sent through the
-            Contact page.
+            Një rrjedhë vetëshërbyese për fshirjen e llogarisë është planifikuar
+            por ende nuk është përfunduar. Deri atëherë, kërkesat për fshirje të
+            llogarisë mund të dërgohen përmes faqes së Kontaktit.
           </p>
 
-          <h2>8. Changes to these terms</h2>
+          <h2>8. Ndryshimet në këto kushte</h2>
           <p>
-            These terms may be updated as the app changes. Continued use after
-            updates means you accept the updated terms.
+            Këto kushte mund të përditësohen kur aplikacioni ndryshon.
+            Përdorimi i vazhdueshëm pas përditësimeve do të thotë se i pranon
+            kushtet e përditësuara.
           </p>
         </AnimatedSection>
 

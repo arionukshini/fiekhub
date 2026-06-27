@@ -6,6 +6,7 @@ import {
   KeyRound,
   LogOut,
   Mail,
+  Settings,
   Shield,
   Trash2,
   User,
@@ -31,14 +32,15 @@ import {
 import { supabase } from '../lib/supabaseClient.js'
 
 const accountSections = [
-  { id: 'profile', label: 'Profile', icon: User },
-  { id: 'account', label: 'Account', icon: UserCog },
-  { id: 'security', label: 'Security', icon: KeyRound },
-  { id: 'setup', label: 'Student setup', icon: BookOpen },
-  { id: 'privacy', label: 'Privacy', icon: Shield },
-  { id: 'notifications', label: 'Notifications', icon: Bell },
-  { id: 'sign-out', label: 'Sign out', icon: LogOut },
-  { id: 'delete-account', label: 'Delete account', icon: Trash2, danger: true },
+  { id: 'profile', label: 'Profili', icon: User },
+  { id: 'account', label: 'Llogaria', icon: UserCog },
+  { id: 'security', label: 'Siguria', icon: KeyRound },
+  { id: 'setup', label: 'Të dhënat studentore', icon: BookOpen },
+  { id: 'preferences', label: 'Preferencat', icon: Settings },
+  { id: 'privacy', label: 'Privatësia', icon: Shield },
+  { id: 'notifications', label: 'Njoftimet', icon: Bell },
+  { id: 'sign-out', label: 'Dil', icon: LogOut },
+  { id: 'delete-account', label: 'Fshi llogarinë', icon: Trash2, danger: true },
 ]
 
 function AccountPage() {
@@ -62,6 +64,9 @@ function AccountPage() {
   })
   const [visibility, setVisibility] = useState(
     metadata.profile_visibility ?? 'students',
+  )
+  const [showAcceptanceExams, setShowAcceptanceExams] = useState(
+    metadata.show_acceptance_exams !== false,
   )
   const [newPassword, setNewPassword] = useState('')
   const [confirmPassword, setConfirmPassword] = useState('')
@@ -97,16 +102,18 @@ function AccountPage() {
     setStatus('')
 
     if (!hasSupabaseConfig || !supabase) {
-      setError('Supabase is not configured yet.')
+      setError('Supabase nuk është konfiguruar ende.')
       return
     }
 
     setSaving(true)
     const { error: updateError } = await supabase.auth.updateUser({
       data: {
+        ...metadata,
         full_name: fullName.trim(),
         profile_visibility: visibility,
         role: metadata.role ?? 'STUDENT',
+        show_acceptance_exams: showAcceptanceExams,
         setup_completed: Boolean(studyDepartment && studyYear && studyGroup),
         setup_completed_at:
           studyDepartment && studyYear && studyGroup
@@ -120,11 +127,13 @@ function AccountPage() {
     setSaving(false)
 
     if (updateError) {
-      setError(formatAuthError(updateError, 'Account details could not be saved.'))
+      setError(
+        formatAuthError(updateError, 'Të dhënat e llogarisë nuk u ruajtën.'),
+      )
       return
     }
 
-    setStatus('Account details saved.')
+    setStatus('Të dhënat e llogarisë u ruajtën.')
   }
 
   async function changePassword(event) {
@@ -133,17 +142,17 @@ function AccountPage() {
     setStatus('')
 
     if (!hasSupabaseConfig || !supabase) {
-      setError('Supabase is not configured yet.')
+      setError('Supabase nuk është konfiguruar ende.')
       return
     }
 
     if (newPassword.length < 8) {
-      setError('Password must be at least 8 characters.')
+      setError('Fjalëkalimi duhet të ketë të paktën 8 karaktere.')
       return
     }
 
     if (newPassword !== confirmPassword) {
-      setError('Passwords do not match.')
+      setError('Fjalëkalimet nuk përputhen.')
       return
     }
 
@@ -154,13 +163,13 @@ function AccountPage() {
     setSavingSecurity(false)
 
     if (updateError) {
-      setError(formatAuthError(updateError, 'Password could not be changed.'))
+      setError(formatAuthError(updateError, 'Fjalëkalimi nuk u ndryshua.'))
       return
     }
 
     setNewPassword('')
     setConfirmPassword('')
-    setStatus('Password changed.')
+    setStatus('Fjalëkalimi u ndryshua.')
   }
 
   async function handleSignOut() {
@@ -180,19 +189,19 @@ function AccountPage() {
           whileInView="show"
         >
           <motion.p className="eyebrow" variants={revealItem}>
-            Account
+            Llogaria
           </motion.p>
           <motion.h1 id="account-title" variants={revealItem}>
             {displayName}
           </motion.h1>
           <motion.p variants={revealItem}>
-            Manage your student profile, privacy, setup details, and account
-            access from one place.
+            Menaxho profilin, privatësinë, të dhënat studentore dhe qasjen në
+            llogari nga një vend.
           </motion.p>
         </motion.section>
 
         <div className="account-layout">
-          <aside className="account-sidebar" aria-label="Account sections">
+          <aside className="account-sidebar" aria-label="Seksionet e llogarisë">
             {accountSections.map((section) => {
               const Icon = section.icon
               const isActive = section.id === activeSection
@@ -227,24 +236,24 @@ function AccountPage() {
           >
             <div className="account-panel-header">
               <div>
-                <p className="eyebrow">Settings</p>
+                <p className="eyebrow">Cilësimet</p>
                 <h2 id="account-section-title">{sectionTitle}</h2>
               </div>
               <span className={`setup-pill${setupComplete ? ' complete' : ''}`}>
-                {setupComplete ? 'Setup complete' : 'Setup needed'}
+                {setupComplete ? 'Konfigurimi u plotësua' : 'Duhet konfigurim'}
               </span>
             </div>
 
             {activeSection === 'profile' && (
               <form className="account-form" onSubmit={saveAccountMetadata}>
                 <div className="auth-field">
-                  <label htmlFor="account-full-name">Full name</label>
+                  <label htmlFor="account-full-name">Emri i plotë</label>
                   <div className="auth-input-shell">
                     <User aria-hidden="true" size={18} />
                     <input
                       id="account-full-name"
                       onChange={(event) => setFullName(event.target.value)}
-                      placeholder="Your full name"
+                      placeholder="Emri yt i plotë"
                       type="text"
                       value={fullName}
                     />
@@ -265,32 +274,34 @@ function AccountPage() {
 
             {activeSection === 'account' && (
               <div className="account-stack">
-                <InfoRow label="Role" value={metadata.role ?? 'STUDENT'} />
+                <InfoRow label="Roli" value={formatRole(metadata.role)} />
                 <InfoRow
-                  label="Department"
+                  label="Departamenti"
                   value={
                     studyDepartment
                       ? getStudyDepartmentLabel(studyDepartment)
-                      : 'Not set'
+                      : 'Nuk është caktuar'
                   }
                 />
                 <InfoRow
-                  label="Year"
-                  value={studyYear ? getStudyYearLabel(studyYear) : 'Not set'}
+                  label="Viti"
+                  value={studyYear ? getStudyYearLabel(studyYear) : 'Nuk është caktuar'}
                 />
                 <InfoRow
-                  label="Group"
-                  value={studyGroup ? getStudyGroupLabel(studyGroup) : 'Not set'}
+                  label="Grupi"
+                  value={studyGroup ? getStudyGroupLabel(studyGroup) : 'Nuk është caktuar'}
                 />
                 <InfoRow
-                  label="User ID"
-                  value={user?.id ?? 'Unavailable'}
+                  label="ID e përdoruesit"
+                  value={user?.id ?? 'I padisponueshëm'}
                   wrapValue
                 />
                 <InfoRow
-                  label="Email status"
+                  label="Statusi i email-it"
                   value={
-                    user?.email_confirmed_at ? 'Verified' : 'Waiting verification'
+                    user?.email_confirmed_at
+                      ? 'I verifikuar'
+                      : 'Në pritje të verifikimit'
                   }
                 />
               </div>
@@ -300,16 +311,16 @@ function AccountPage() {
               <div className="account-stack">
                 <form className="account-form-section" onSubmit={changePassword}>
                   <div>
-                    <h3>Change password</h3>
+                    <h3>Ndrysho fjalëkalimin</h3>
                     <p>
-                      Use at least 8 characters. You will use this password the
-                      next time you sign in.
+                      Përdor të paktën 8 karaktere. Këtë fjalëkalim do ta
+                      përdorësh herën tjetër kur kyçesh.
                     </p>
                   </div>
 
                   <div className="account-choice-grid">
                     <div className="auth-field">
-                      <label htmlFor="new-password">New password</label>
+                      <label htmlFor="new-password">Fjalëkalimi i ri</label>
                       <div className="auth-input-shell">
                         <KeyRound aria-hidden="true" size={18} />
                         <input
@@ -317,7 +328,7 @@ function AccountPage() {
                           id="new-password"
                           minLength="8"
                           onChange={(event) => setNewPassword(event.target.value)}
-                          placeholder="At least 8 characters"
+                          placeholder="Të paktën 8 karaktere"
                           required
                           type="password"
                           value={newPassword}
@@ -326,7 +337,7 @@ function AccountPage() {
                     </div>
 
                     <div className="auth-field">
-                      <label htmlFor="confirm-password">Confirm password</label>
+                      <label htmlFor="confirm-password">Konfirmo fjalëkalimin</label>
                       <div className="auth-input-shell">
                         <KeyRound aria-hidden="true" size={18} />
                         <input
@@ -336,7 +347,7 @@ function AccountPage() {
                           onChange={(event) =>
                             setConfirmPassword(event.target.value)
                           }
-                          placeholder="Repeat password"
+                          placeholder="Përsërit fjalëkalimin"
                           required
                           type="password"
                           value={confirmPassword}
@@ -350,7 +361,7 @@ function AccountPage() {
                     disabled={savingSecurity}
                     type="submit"
                   >
-                    {savingSecurity ? 'Changing...' : 'Change password'}
+                    {savingSecurity ? 'Duke ndryshuar...' : 'Ndrysho fjalëkalimin'}
                   </button>
                 </form>
 
@@ -361,7 +372,7 @@ function AccountPage() {
               <form className="account-form" onSubmit={saveAccountMetadata}>
                 <div className="account-choice-grid">
                   <div className="auth-field">
-                    <label htmlFor="study-department">Department</label>
+                    <label htmlFor="study-department">Departamenti</label>
                     <select
                       className="account-select"
                       id="study-department"
@@ -373,7 +384,7 @@ function AccountPage() {
                       required
                       value={studyDepartment}
                     >
-                      <option value="">Choose department</option>
+                      <option value="">Zgjedh departamentin</option>
                       {studyDepartments.map((department) => (
                         <option key={department.value} value={department.value}>
                           {department.label}
@@ -383,7 +394,7 @@ function AccountPage() {
                   </div>
 
                   <div className="auth-field">
-                    <label htmlFor="study-year">Year</label>
+                    <label htmlFor="study-year">Viti</label>
                     <select
                       className="account-select"
                       id="study-year"
@@ -395,7 +406,7 @@ function AccountPage() {
                       disabled={!studyDepartment}
                       value={studyYear}
                     >
-                      <option value="">Choose year</option>
+                      <option value="">Zgjedh vitin</option>
                       {studyYears.map((year) => (
                         <option key={year.value} value={year.value}>
                           {year.label}
@@ -405,7 +416,7 @@ function AccountPage() {
                   </div>
 
                   <div className="auth-field">
-                    <label htmlFor="study-group">Group</label>
+                    <label htmlFor="study-group">Grupi</label>
                     <select
                       className="account-select"
                       id="study-group"
@@ -414,7 +425,7 @@ function AccountPage() {
                       disabled={!studyDepartment || !studyYear}
                       value={studyGroup}
                     >
-                      <option value="">Choose group</option>
+                      <option value="">Zgjedh grupin</option>
                       {studyGroups.map((group) => (
                         <option key={group.value} value={group.value}>
                           {group.label}
@@ -425,8 +436,8 @@ function AccountPage() {
                 </div>
 
                 <p className="account-help">
-                  These values will drive the app setup process for schedules,
-                  materials, and student-specific dashboard sections.
+                  Këto të dhëna përdoren për orarin, materialet dhe pjesët e
+                  panelit që lidhen me profilin tënd studentor.
                 </p>
 
                 <SaveFooter saving={saving} />
@@ -436,7 +447,7 @@ function AccountPage() {
             {activeSection === 'privacy' && (
               <form className="account-form" onSubmit={saveAccountMetadata}>
                 <fieldset className="account-radio-group">
-                  <legend>Profile visibility</legend>
+                  <legend>Dukshmëria e profilit</legend>
                   <label>
                     <input
                       checked={visibility === 'students'}
@@ -444,7 +455,7 @@ function AccountPage() {
                       onChange={() => setVisibility('students')}
                       type="radio"
                     />
-                    Visible to signed-in students
+                    I dukshëm për studentët e kyçur
                   </label>
                   <label>
                     <input
@@ -453,7 +464,7 @@ function AccountPage() {
                       onChange={() => setVisibility('private')}
                       type="radio"
                     />
-                    Private
+                    Privat
                   </label>
                 </fieldset>
 
@@ -461,19 +472,50 @@ function AccountPage() {
               </form>
             )}
 
+            {activeSection === 'preferences' && (
+              <form className="account-form" onSubmit={saveAccountMetadata}>
+                <label
+                  className="account-toggle-row"
+                  htmlFor="show-acceptance-exams"
+                >
+                  <span>
+                    <strong>Shfaq provimet pranuese</strong>
+                    <small>
+                      Mbaji Provimet pranuese të dukshme në navigimin kryesor.
+                    </small>
+                  </span>
+                  <input
+                    checked={showAcceptanceExams}
+                    id="show-acceptance-exams"
+                    onChange={(event) =>
+                      setShowAcceptanceExams(event.target.checked)
+                    }
+                    type="checkbox"
+                  />
+                </label>
+
+                <p className="account-help">
+                  Çaktivizoje nëse tashmë je në fakultet dhe të duhen vetëm
+                  materialet e lëndëve.
+                </p>
+
+                <SaveFooter saving={saving} />
+              </form>
+            )}
+
             {activeSection === 'notifications' && (
               <div className="account-stack">
-                <InfoRow label="Class updates" value="Ready for setup" />
-                <InfoRow label="Materials" value="Ready for setup" />
-                <InfoRow label="Exam reminders" value="Ready for setup" />
+                <InfoRow label="Përditësimet e ligjëratave" value="Gati për konfigurim" />
+                <InfoRow label="Materialet" value="Gati për konfigurim" />
+                <InfoRow label="Kujtesat për provime" value="Gati për konfigurim" />
               </div>
             )}
 
             {activeSection === 'sign-out' && (
               <div className="account-action-block">
                 <p>
-                  Sign out from this device. You can log back in with your email
-                  and password.
+                  Dil nga kjo pajisje. Mund të kyçesh përsëri me email dhe
+                  fjalëkalim.
                 </p>
                 <button
                   className="button button-primary account-action-button"
@@ -481,7 +523,7 @@ function AccountPage() {
                   type="button"
                 >
                   <LogOut aria-hidden="true" size={18} />
-                  Sign out
+                  Dil
                 </button>
               </div>
             )}
@@ -489,8 +531,8 @@ function AccountPage() {
             {activeSection === 'delete-account' && (
               <div className="account-action-block danger">
                 <p>
-                  Account deletion needs a server-side endpoint before it can be
-                  completed safely from the app.
+                  Fshirja e llogarisë kërkon një endpoint në server para se të
+                  kryhet në mënyrë të sigurt nga aplikacioni.
                 </p>
                 <button
                   className="button button-secondary account-action-button"
@@ -498,7 +540,7 @@ function AccountPage() {
                   type="button"
                 >
                   <Trash2 aria-hidden="true" size={18} />
-                  Delete account
+                  Fshi llogarinë
                 </button>
               </div>
             )}
@@ -515,7 +557,7 @@ function AccountPage() {
 function SaveFooter({ saving }) {
   return (
     <button className="button button-primary account-save" disabled={saving}>
-      {saving ? 'Saving...' : 'Save changes'}
+      {saving ? 'Duke ruajtur...' : 'Ruaj ndryshimet'}
     </button>
   )
 }
@@ -527,6 +569,10 @@ function InfoRow({ label, value, wrapValue = false }) {
       <strong className={wrapValue ? 'wrap' : ''}>{value}</strong>
     </div>
   )
+}
+
+function formatRole(role) {
+  return role === 'STUDENT' || !role ? 'Student' : role
 }
 
 function formatAuthError(error, fallback) {

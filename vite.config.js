@@ -10,6 +10,8 @@ export default defineConfig({
       'shaggy-rabbits-rest.loca.lt',
       'tangy-papers-hang.loca.lt',
       'loud-otters-run.loca.lt',
+      'whole-badgers-bow.loca.lt',
+      'kind-owls-double.loca.lt',
     ],
   },
 })

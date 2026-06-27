@@ -7,41 +7,43 @@ function AboutPage() {
     <div className="app-shell">
       <main className="info-page">
         <AnimatedSection className="info-hero">
-          <AnimatedItem as="p" className="eyebrow">About</AnimatedItem>
-          <AnimatedItem as="h1">About FIEK Hub</AnimatedItem>
+          <AnimatedItem as="p" className="eyebrow">Rreth nesh</AnimatedItem>
+          <AnimatedItem as="h1">Rreth FIEK Hub</AnimatedItem>
           <AnimatedItem as="p">
-            FIEK Hub is a student-focused web app for organizing useful FIEK
-            resources, account setup, and study-related materials in one calm
-            place.
+            FIEK Hub është aplikacion web për studentë, i ndërtuar për të
+            organizuar burime të dobishme të FIEK-ut, konfigurimin e llogarisë
+            dhe materialet e studimit në një vend të qartë.
           </AnimatedItem>
         </AnimatedSection>
 
-        <AnimatedSection className="info-grid" aria-label="About FIEK Hub">
+        <AnimatedSection className="info-grid" aria-label="Rreth FIEK Hub">
           <AnimatedItem as="article" className="info-card">
             <BookOpen aria-hidden="true" />
-            <h2>Materials first</h2>
+            <h2>Materialet në fokus</h2>
             <p>
-              The first public material area focuses on provime pranuese PDFs,
-              organized by year and viewable directly inside the app.
+              Zona e parë publike e materialeve fokusohet në PDF-të e provimeve
+              pranuese, të organizuara sipas viteve dhe të shikueshme direkt në
+              aplikacion.
             </p>
           </AnimatedItem>
 
           <AnimatedItem as="article" className="info-card">
             <GraduationCap aria-hidden="true" />
-            <h2>Student setup</h2>
+            <h2>Të dhënat studentore</h2>
             <p>
-              Accounts collect only the setup details needed to shape the app:
-              department, study year, group, and basic profile information.
+              Llogaritë mbledhin vetëm të dhënat që duhen për aplikacionin:
+              departamentin, vitin e studimit, grupin dhe informacionet bazë të
+              profilit.
             </p>
           </AnimatedItem>
 
           <AnimatedItem as="article" className="info-card">
             <ShieldCheck aria-hidden="true" />
-            <h2>Independent project</h2>
+            <h2>Projekt i pavarur</h2>
             <p>
-              FIEK Hub is built as an independent student tool. It is not an
-              official University of Prishtina or FIEK service unless stated
-              otherwise in the future.
+              FIEK Hub është ndërtuar si mjet i pavarur studentor. Nuk është
+              shërbim zyrtar i Universitetit të Prishtinës ose i FIEK-ut,
+              përveç nëse thuhet ndryshe në të ardhmen.
             </p>
           </AnimatedItem>
         </AnimatedSection>
@@ -49,22 +51,24 @@ function AboutPage() {
         <AnimatedSection className="info-panel" item>
           <div className="info-panel-heading">
             <UserRound aria-hidden="true" />
-            <h2>Owner and maintainer</h2>
+            <h2>Krijuesi dhe mirëmbajtësi</h2>
           </div>
           <p>
-            FIEK Hub is created and maintained by Arion as an independent
-            student project. The goal is to make everyday student workflows
-            easier without pretending to replace official university systems.
+            FIEK Hub është krijuar dhe mirëmbahet nga Arion si projekt i
+            pavarur studentor. Qëllimi është t'i lehtësojë proceset e
+            përditshme studentore pa pretenduar t'i zëvendësojë sistemet
+            zyrtare universitare.
           </p>
         </AnimatedSection>
 
         <AnimatedSection className="info-panel" item>
-          <h2>Current scope</h2>
+          <h2>Fusha aktuale</h2>
           <p>
-            The app currently includes authentication, required student setup,
-            account settings, password changes, and acceptance exam materials.
-            Schedule, notifications, and richer student dashboards can be added
-            after the account flow is stable.
+            Aplikacioni aktualisht përfshin autentikimin, konfigurimin e
+            detyrueshëm studentor, cilësimet e llogarisë, ndryshimin e
+            fjalëkalimit dhe materialet e provimeve pranuese. Orari, njoftimet
+            dhe panele më të pasura studentore mund të shtohen pasi rrjedha e
+            llogarisë të jetë stabile.
           </p>
         </AnimatedSection>
 

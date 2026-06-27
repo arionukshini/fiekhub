@@ -1803,6 +1803,75 @@ h1 {
   font-weight: 700;
 }
 
+.account-toggle-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  border: 1px solid color-mix(in srgb, var(--color-border) 82%, transparent);
+  border-radius: 8px;
+  padding: 16px;
+  background: color-mix(in srgb, var(--color-primary-soft) 34%, transparent);
+  cursor: pointer;
+}
+
+.account-toggle-row > span {
+  display: grid;
+  min-width: 0;
+  gap: 4px;
+}
+
+.account-toggle-row strong {
+  color: var(--color-primary-dark);
+  font-size: 1rem;
+}
+
+.account-toggle-row small {
+  color: var(--color-muted);
+  line-height: 1.5;
+}
+
+.account-toggle-row input {
+  position: relative;
+  flex: 0 0 auto;
+  width: 52px;
+  height: 30px;
+  appearance: none;
+  border: 1px solid color-mix(in srgb, var(--color-border) 86%, transparent);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--color-muted) 16%, var(--color-surface));
+  transition:
+    background-color 180ms ease,
+    border-color 180ms ease;
+}
+
+.account-toggle-row input::before {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 20px;
+  height: 20px;
+  border-radius: 999px;
+  background: var(--color-surface);
+  box-shadow: 0 2px 8px color-mix(in srgb, var(--color-shadow) 22%, transparent);
+  content: '';
+  transition: transform 180ms ease;
+}
+
+.account-toggle-row input:checked {
+  border-color: color-mix(in srgb, var(--color-primary) 62%, transparent);
+  background: var(--color-primary);
+}
+
+.account-toggle-row input:checked::before {
+  transform: translateX(22px);
+}
+
+.account-toggle-row input:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 3px;
+}
+
 .account-save,
 .account-action-button {
   width: fit-content;

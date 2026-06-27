@@ -9,18 +9,22 @@ import {
 import { motion } from 'framer-motion'
 import { Link, useLocation } from 'react-router-dom'
 
-function TubelightNav({ isSignedIn }) {
+function TubelightNav({ isSignedIn, showAcceptanceExams = true }) {
   const location = useLocation()
   const items = isSignedIn
     ? [
         { name: 'Ballina', url: '/', icon: Home },
         { name: 'Paneli', url: '/dashboard', icon: LayoutDashboard },
         { name: 'Materialet', url: '/materials', icon: NotebookTabs },
-        {
-          name: 'Provimet pranuese',
-          url: '/provime-pranuese',
-          icon: NotebookTabs,
-        },
+        ...(showAcceptanceExams
+          ? [
+              {
+                name: 'Provimet pranuese',
+                url: '/provime-pranuese',
+                icon: NotebookTabs,
+              },
+            ]
+          : []),
         { name: 'Llogaria', url: '/account', icon: UserCircle },
       ]
     : [

@@ -32,7 +32,7 @@ function PdfCanvasViewer({ title, url }) {
         const response = await fetch(url, { signal: abortController.signal })
 
         if (!response.ok) {
-          throw new Error(`PDF request failed with ${response.status}`)
+          throw new Error(`Kërkesa për PDF dështoi me ${response.status}`)
         }
 
         const pdfBytes = await response.arrayBuffer()
@@ -58,13 +58,13 @@ function PdfCanvasViewer({ title, url }) {
           const context = canvas.getContext('2d')
 
           if (!context) {
-            throw new Error('Canvas rendering is not available.')
+            throw new Error('Shfaqja në canvas nuk është e disponueshme.')
           }
 
           canvas.width = Math.floor(viewport.width)
           canvas.height = Math.floor(viewport.height)
           canvas.className = 'pdf-canvas-page'
-          canvas.setAttribute('aria-label', `${title} page ${pageNumber}`)
+          canvas.setAttribute('aria-label', `${title} faqja ${pageNumber}`)
 
           viewer.append(canvas)
 

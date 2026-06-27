@@ -1,10 +1,11 @@
 import { Link } from 'react-router-dom'
 import { useAuth } from '../hooks/useAuth.js'
+import { shouldShowAcceptanceExams } from '../lib/userPreferences.js'
 import FiekHubBooksLogo from './FiekHubBooksLogo.jsx'
 import TubelightNav from './TubelightNav.jsx'
 
 function SiteHeader() {
-  const { session } = useAuth()
+  const { session, user } = useAuth()
 
   return (
     <header className="site-header">
@@ -15,7 +16,10 @@ function SiteHeader() {
         <span>FIEK Hub</span>
       </Link>
 
-      <TubelightNav isSignedIn={Boolean(session)} />
+      <TubelightNav
+        isSignedIn={Boolean(session)}
+        showAcceptanceExams={shouldShowAcceptanceExams(user)}
+      />
     </header>
   )
 }
