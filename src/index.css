@@ -3068,17 +3068,59 @@ h1 {
 }
 
 .pdf-render-status {
-  margin-bottom: 14px;
+  margin-bottom: 12px;
   color: var(--color-muted);
   font-size: 0.86rem;
   font-weight: 800;
   text-align: center;
 }
 
+.pdf-page-controls {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  display: flex;
+  width: fit-content;
+  max-width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 0 auto 16px;
+  border: 1px solid color-mix(in srgb, var(--color-border) 82%, transparent);
+  border-radius: 999px;
+  padding: 6px;
+  background: color-mix(in srgb, var(--color-surface) 94%, transparent);
+  box-shadow: 0 12px 28px rgba(66, 47, 39, 0.1);
+}
+
+.pdf-page-controls button {
+  min-height: 34px;
+  border: 0;
+  border-radius: 999px;
+  padding: 0 12px;
+  color: var(--color-primary-dark);
+  background: var(--color-primary-soft);
+  font-size: 0.82rem;
+  font-weight: 850;
+}
+
+.pdf-page-controls button:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+
+.pdf-page-controls span {
+  min-width: 54px;
+  color: var(--color-muted);
+  font-size: 0.82rem;
+  font-weight: 850;
+  text-align: center;
+}
+
 .pdf-canvas-pages {
   display: grid;
   justify-items: center;
-  gap: 18px;
+  min-width: 0;
 }
 
 .pdf-canvas-page {
@@ -3389,6 +3431,11 @@ h1 {
   .file-search {
     width: 100%;
   }
+
+  .file-browser-list,
+  .topic-document-list {
+    max-height: none;
+  }
 }
 
 @media (max-width: 640px) {
@@ -3598,25 +3645,38 @@ h1 {
   }
 
   .study-materials-page {
+    width: min(100% - 20px, 1120px);
     padding: 24px 0 64px;
   }
 
   .study-materials-hero {
-    padding: 36px 4px 44px;
+    padding: 26px 4px 32px;
   }
 
   .study-materials-hero h1 {
-    font-size: clamp(2.75rem, 14vw, 4rem);
+    font-size: 2.8rem;
+    line-height: 1;
+  }
+
+  .study-materials-hero > p:last-child {
+    margin-top: 16px;
+    font-size: 0.98rem;
   }
 
   .study-step,
   .materials-browser-section {
-    border-radius: 22px;
-    padding: 18px;
+    border-radius: 16px;
+    padding: 14px;
   }
 
   .study-step-heading {
     align-items: flex-start;
+    margin-bottom: 16px;
+  }
+
+  .study-step-heading h2,
+  .materials-browser-heading h2 {
+    font-size: 1.45rem;
   }
 
   .study-subject-grid {
@@ -3631,7 +3691,7 @@ h1 {
   }
 
   .file-browser {
-    border-radius: 16px;
+    border-radius: 14px;
   }
 
   .file-browser-toolbar {
@@ -3639,12 +3699,28 @@ h1 {
   }
 
   .file-browser-list {
-    max-height: 470px;
     padding: 6px;
   }
 
   .file-browser-row {
-    padding-inline: 8px;
+    min-height: 58px;
+    grid-template-columns: 34px minmax(0, 1fr) 16px;
+    gap: 9px;
+    padding: 8px;
+  }
+
+  .file-row-icon {
+    width: 34px;
+    height: 34px;
+    border-radius: 9px;
+  }
+
+  .file-row-name strong {
+    font-size: 0.84rem;
+  }
+
+  .file-row-name small {
+    font-size: 0.7rem;
   }
 
   .material-preview-toolbar {
@@ -3673,23 +3749,53 @@ h1 {
     display: grid;
   }
 
+  .materials-layout {
+    gap: 14px;
+  }
+
   .materials-sidebar {
     position: static;
+    padding: 14px;
   }
 
   .materials-files {
-    padding: 18px;
+    padding: 14px;
   }
 
   .pdf-viewer,
   .pdf-empty-state {
-    min-height: 430px;
+    min-height: 360px;
   }
 
   .pdf-toolbar,
   .pdf-actions {
     align-items: stretch;
     flex-direction: column;
+  }
+
+  .pdf-toolbar {
+    padding: 12px;
+  }
+
+  .pdf-canvas-viewer {
+    padding: 10px;
+  }
+
+  .pdf-page-controls {
+    position: static;
+    width: 100%;
+    gap: 6px;
+    margin-bottom: 12px;
+  }
+
+  .pdf-page-controls button {
+    flex: 1 1 0;
+    min-height: 38px;
+  }
+
+  .pdf-page-controls span {
+    flex: 0 0 auto;
+    min-width: 48px;
   }
 
   .theme-toggle {
