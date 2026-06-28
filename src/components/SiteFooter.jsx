@@ -4,6 +4,7 @@ import FiekHubBooksLogo from './FiekHubBooksLogo.jsx'
 
 const footerLinks = [
   { label: 'Rreth nesh', to: '/about' },
+  { label: 'Dërgo materiale', to: '/dergo-materiale' },
   { label: 'Kontakti', to: '/contact' },
   { label: 'Privatësia', to: '/privacy' },
   { label: 'Kushtet', to: '/terms' },

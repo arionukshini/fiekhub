@@ -19,6 +19,7 @@ import MaterialsPage from './pages/MaterialsPage.jsx'
 import PrivacyPolicyPage from './pages/PrivacyPolicyPage.jsx'
 import RegisterPage from './pages/RegisterPage.jsx'
 import SetupPage from './pages/SetupPage.jsx'
+import SubmitMaterialsPage from './pages/SubmitMaterialsPage.jsx'
 import TermsPage from './pages/TermsPage.jsx'
 
 function App() {
@@ -41,6 +42,7 @@ function App() {
             <Route path="/" element={<LandingPage />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/contact" element={<ContactPage />} />
+            <Route path="/dergo-materiale" element={<SubmitMaterialsPage />} />
             <Route path="/privacy" element={<PrivacyPolicyPage />} />
             <Route path="/terms" element={<TermsPage />} />
             <Route path="/faq" element={<FaqPage />} />

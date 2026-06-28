@@ -2,18 +2,25 @@ import { useEffect, useRef, useState } from 'react'
 import '../lib/pdfjsCompat.js'
 import pdfWorkerUrl from '../lib/pdf.worker.compat.mjs?url'
 
-const maxCanvasPixels = 4800000
+const maxCanvasPixels = 18000000
+const minCanvasPixelRatio = 2
+const maxCanvasPixelRatio = 3
+const minZoom = 0.8
+const maxZoom = 2.4
+const zoomStep = 0.2
 
 function PdfCanvasViewer({ title, url }) {
   const canvasRef = useRef(null)
   const containerRef = useRef(null)
   const loadingTaskRef = useRef(null)
+  const panStateRef = useRef(null)
   const pdfjsLibRef = useRef(null)
   const pdfRef = useRef(null)
   const renderTaskRef = useRef(null)
   const [pageCount, setPageCount] = useState(0)
   const [pageNumber, setPageNumber] = useState(1)
   const [renderWidth, setRenderWidth] = useState(0)
+  const [zoom, setZoom] = useState(1)
   const [status, setStatus] = useState('Duke ngarkuar PDF-në...')
   const [error, setError] = useState('')
 
@@ -72,6 +79,7 @@ function PdfCanvasViewer({ title, url }) {
       setError('')
       setPageCount(0)
       setPageNumber(1)
+      setZoom(1)
       clearCanvas()
 
       cleanupPdf()
@@ -152,7 +160,7 @@ function PdfCanvasViewer({ title, url }) {
         if (!active) return
 
         const baseViewport = page.getViewport({ scale: 1 })
-        const cssWidth = Math.max(260, Math.min(renderWidth, 920))
+        const cssWidth = Math.max(260, Math.min(renderWidth * zoom, 1400))
         const viewport = page.getViewport({
           scale: cssWidth / baseViewport.width,
         })
@@ -212,14 +220,84 @@ function PdfCanvasViewer({ title, url }) {
         renderTaskRef.current = null
       }
     }
-  }, [pageCount, pageNumber, renderWidth, title])
+  }, [pageCount, pageNumber, renderWidth, title, zoom])
 
   function goToPreviousPage() {
     setPageNumber((currentPage) => Math.max(1, currentPage - 1))
+    scrollPdfViewportToTop()
   }
 
   function goToNextPage() {
     setPageNumber((currentPage) => Math.min(pageCount, currentPage + 1))
+    scrollPdfViewportToTop()
+  }
+
+  function zoomOut() {
+    setZoom((currentZoom) =>
+      Math.max(minZoom, Number((currentZoom - zoomStep).toFixed(2))),
+    )
+  }
+
+  function zoomIn() {
+    setZoom((currentZoom) =>
+      Math.min(maxZoom, Number((currentZoom + zoomStep).toFixed(2))),
+    )
+  }
+
+  function resetZoom() {
+    setZoom(1)
+  }
+
+  function getPdfScrollContainer() {
+    return containerRef.current?.closest('.pdf-viewer')
+  }
+
+  function startPan(event) {
+    if (event.button !== undefined && event.button !== 0) return
+
+    const scrollContainer = getPdfScrollContainer()
+    if (!scrollContainer) return
+
+    panStateRef.current = {
+      pointerId: event.pointerId,
+      scrollLeft: scrollContainer.scrollLeft,
+      scrollTop: scrollContainer.scrollTop,
+      startX: event.clientX,
+      startY: event.clientY,
+    }
+
+    event.currentTarget.setPointerCapture?.(event.pointerId)
+    event.preventDefault()
+  }
+
+  function panPdf(event) {
+    const panState = panStateRef.current
+    const scrollContainer = getPdfScrollContainer()
+
+    if (!panState || !scrollContainer || panState.pointerId !== event.pointerId) {
+      return
+    }
+
+    scrollContainer.scrollLeft =
+      panState.scrollLeft - (event.clientX - panState.startX)
+    scrollContainer.scrollTop = panState.scrollTop - (event.clientY - panState.startY)
+    event.preventDefault()
+  }
+
+  function stopPan(event) {
+    if (panStateRef.current?.pointerId !== event.pointerId) return
+
+    event.currentTarget.releasePointerCapture?.(event.pointerId)
+    panStateRef.current = null
+  }
+
+  function scrollPdfViewportToTop() {
+    window.requestAnimationFrame(() => {
+      containerRef.current?.closest('.pdf-viewer')?.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+      })
+    })
   }
 
   return (
@@ -250,7 +328,29 @@ function PdfCanvasViewer({ title, url }) {
         </div>
       )}
 
-      <div className="pdf-canvas-pages">
+      {pageCount > 0 && (
+        <div className="pdf-zoom-controls" aria-label="Zmadhimi i PDF-së">
+          <button disabled={zoom <= minZoom} onClick={zoomOut} type="button">
+            -
+          </button>
+          <span>{Math.round(zoom * 100)}%</span>
+          <button disabled={zoom >= maxZoom} onClick={zoomIn} type="button">
+            +
+          </button>
+          <button disabled={zoom === 1} onClick={resetZoom} type="button">
+            Fit
+          </button>
+        </div>
+      )}
+
+      <div
+        className="pdf-canvas-pages"
+        onLostPointerCapture={stopPan}
+        onPointerCancel={stopPan}
+        onPointerDown={startPan}
+        onPointerMove={panPdf}
+        onPointerUp={stopPan}
+      >
         <canvas className="pdf-canvas-page" ref={canvasRef} />
       </div>
     </div>
@@ -258,7 +358,11 @@ function PdfCanvasViewer({ title, url }) {
 }
 
 function getSafePixelRatio(width, height) {
-  const preferredRatio = Math.min(window.devicePixelRatio || 1, 1.5)
+  const deviceRatio = window.devicePixelRatio || 1
+  const preferredRatio = Math.min(
+    Math.max(deviceRatio, minCanvasPixelRatio),
+    maxCanvasPixelRatio,
+  )
   const preferredPixels = width * height * preferredRatio * preferredRatio
 
   if (preferredPixels <= maxCanvasPixels) return preferredRatio

@@ -1231,6 +1231,11 @@ h1 {
   background: var(--color-warning-bg);
 }
 
+.alert-info {
+  color: var(--color-primary-dark);
+  background: color-mix(in srgb, var(--color-primary) 12%, transparent);
+}
+
 .info-page {
   width: min(1120px, calc(100% - 32px));
   margin: 0 auto;
@@ -1365,6 +1370,172 @@ h1 {
   position: sticky;
   top: 104px;
   margin-top: 0;
+}
+
+.submit-materials-layout {
+  grid-template-columns: minmax(0, 1fr) 340px;
+}
+
+.submit-materials-form {
+  gap: 18px;
+}
+
+.submit-choice-group {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.submit-choice-group legend {
+  grid-column: 1 / -1;
+  margin-bottom: 4px;
+  color: var(--color-text);
+  font-weight: 800;
+}
+
+.submit-choice {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 48px;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 12px 14px;
+  color: var(--color-muted);
+  background: color-mix(in srgb, var(--color-surface) 74%, transparent);
+  cursor: pointer;
+}
+
+.submit-choice input {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--color-primary);
+}
+
+.submit-choice.active {
+  border-color: color-mix(in srgb, var(--color-primary) 58%, var(--color-border));
+  color: var(--color-primary-dark);
+  background: color-mix(in srgb, var(--color-primary) 10%, var(--color-surface));
+}
+
+.submit-description {
+  min-height: 120px;
+}
+
+.upload-dropzone {
+  display: grid;
+  place-items: center;
+  min-height: 190px;
+  border: 1.5px dashed color-mix(in srgb, var(--color-primary) 46%, var(--color-border));
+  border-radius: 8px;
+  padding: 24px;
+  color: var(--color-muted);
+  background: color-mix(in srgb, var(--color-primary) 7%, var(--color-surface));
+  text-align: center;
+  cursor: pointer;
+}
+
+.upload-dropzone svg {
+  color: var(--color-primary);
+}
+
+.upload-dropzone span {
+  margin-top: 10px;
+  color: var(--color-text);
+  font-weight: 800;
+}
+
+.upload-dropzone small {
+  max-width: 440px;
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
+.upload-dropzone input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+}
+
+.selected-files {
+  display: grid;
+  gap: 10px;
+}
+
+.selected-files-summary,
+.selected-file {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--color-surface) 78%, transparent);
+}
+
+.selected-files-summary {
+  justify-content: space-between;
+  padding: 12px 14px;
+  color: var(--color-muted);
+}
+
+.selected-files-summary strong {
+  color: var(--color-text);
+}
+
+.selected-file {
+  min-width: 0;
+  padding: 10px 12px;
+}
+
+.selected-file > svg {
+  flex: 0 0 auto;
+  color: var(--color-primary);
+}
+
+.selected-file span {
+  display: grid;
+  min-width: 0;
+  flex: 1;
+  gap: 2px;
+}
+
+.selected-file strong,
+.selected-file small {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.selected-file strong {
+  color: var(--color-text);
+  font-size: 0.94rem;
+}
+
+.selected-file small {
+  color: var(--color-muted);
+}
+
+.selected-file button {
+  display: inline-grid;
+  place-items: center;
+  flex: 0 0 auto;
+  width: 34px;
+  height: 34px;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  color: var(--color-muted);
+  background: transparent;
+  cursor: pointer;
+}
+
+.selected-file button:hover {
+  color: var(--color-danger-text);
+  background: var(--color-danger-bg);
 }
 
 .legal-page {
@@ -2593,6 +2764,18 @@ h1 {
   transform: translateX(2px);
 }
 
+.file-browser-row.is-active {
+  border-color: color-mix(in srgb, var(--color-primary) 38%, var(--color-border));
+  color: var(--color-primary);
+  background: color-mix(in srgb, var(--color-primary-soft) 76%, transparent);
+  box-shadow: inset 3px 0 0 var(--color-primary);
+}
+
+.file-browser-row.is-active .file-row-icon {
+  color: var(--color-surface);
+  background: var(--color-primary);
+}
+
 .file-browser-row + .file-browser-row {
   border-top-color: color-mix(in srgb, var(--color-border) 55%, transparent);
 }
@@ -2666,6 +2849,11 @@ h1 {
   border-radius: 20px;
   background: color-mix(in srgb, var(--color-surface) 90%, transparent);
   box-shadow: 0 24px 64px rgba(66, 47, 39, 0.11);
+  scroll-margin-top: 104px;
+}
+
+.material-preview-shell:focus {
+  outline: 0;
 }
 
 .topic-document-viewer {
@@ -2828,6 +3016,14 @@ h1 {
   margin: 4px 0 0;
   color: var(--color-primary-dark);
   font-size: 0.96rem;
+  overflow-wrap: anywhere;
+}
+
+.material-preview-controls {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 10px;
 }
 
 .materials-page {
@@ -3050,6 +3246,9 @@ h1 {
   max-height: min(760px, calc(100svh - 180px));
   min-height: 560px;
   overflow: auto;
+  overscroll-behavior: contain;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
   background:
     linear-gradient(
       180deg,
@@ -3075,7 +3274,8 @@ h1 {
   text-align: center;
 }
 
-.pdf-page-controls {
+.pdf-page-controls,
+.pdf-zoom-controls {
   position: sticky;
   top: 0;
   z-index: 2;
@@ -3093,7 +3293,13 @@ h1 {
   box-shadow: 0 12px 28px rgba(66, 47, 39, 0.1);
 }
 
-.pdf-page-controls button {
+.pdf-zoom-controls {
+  top: 56px;
+  margin-bottom: 18px;
+}
+
+.pdf-page-controls button,
+.pdf-zoom-controls button {
   min-height: 34px;
   border: 0;
   border-radius: 999px;
@@ -3104,12 +3310,14 @@ h1 {
   font-weight: 850;
 }
 
-.pdf-page-controls button:disabled {
+.pdf-page-controls button:disabled,
+.pdf-zoom-controls button:disabled {
   cursor: not-allowed;
   opacity: 0.45;
 }
 
-.pdf-page-controls span {
+.pdf-page-controls span,
+.pdf-zoom-controls span {
   min-width: 54px;
   color: var(--color-muted);
   font-size: 0.82rem;
@@ -3119,14 +3327,23 @@ h1 {
 
 .pdf-canvas-pages {
   display: grid;
+  width: max-content;
+  min-width: 100%;
   justify-items: center;
-  min-width: 0;
+  cursor: grab;
+  touch-action: none;
+  user-select: none;
+}
+
+.pdf-canvas-pages:active {
+  cursor: grabbing;
 }
 
 .pdf-canvas-page {
   display: block;
-  max-width: 100%;
+  max-width: none;
   height: auto;
+  user-select: none;
   border: 1px solid color-mix(in srgb, var(--color-border) 86%, transparent);
   border-radius: 6px;
   background: #ffffff;
@@ -3588,6 +3805,21 @@ h1 {
     width: 100%;
   }
 
+  .submit-choice-group {
+    grid-template-columns: 1fr;
+  }
+
+  .upload-dropzone {
+    min-height: 160px;
+    padding: 20px 14px;
+  }
+
+  .selected-files-summary {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 4px;
+  }
+
   .contact-form,
   .legal-content,
   .faq-item,
@@ -3728,6 +3960,19 @@ h1 {
     flex-direction: column;
   }
 
+  .material-preview-controls,
+  .material-preview-controls .pdf-actions {
+    align-items: stretch;
+  }
+
+  .material-preview-controls {
+    flex-direction: column-reverse;
+  }
+
+  .material-preview-controls .topic-document-close {
+    align-self: flex-end;
+  }
+
   .topic-document-header {
     padding: 18px;
   }
@@ -3781,19 +4026,22 @@ h1 {
     padding: 10px;
   }
 
-  .pdf-page-controls {
+  .pdf-page-controls,
+  .pdf-zoom-controls {
     position: static;
     width: 100%;
     gap: 6px;
     margin-bottom: 12px;
   }
 
-  .pdf-page-controls button {
+  .pdf-page-controls button,
+  .pdf-zoom-controls button {
     flex: 1 1 0;
     min-height: 38px;
   }
 
-  .pdf-page-controls span {
+  .pdf-page-controls span,
+  .pdf-zoom-controls span {
     flex: 0 0 auto;
     min-width: 48px;
   }

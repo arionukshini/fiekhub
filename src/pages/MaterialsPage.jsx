@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import {
   ArrowLeft,
@@ -105,6 +105,7 @@ function findFolder(nodes, pathParts) {
 }
 
 function MaterialsPage() {
+  const pdfPreviewRef = useRef(null)
   const [selectedYear, setSelectedYear] = useState(null)
   const [selectedSubject, setSelectedSubject] = useState(null)
   const [manifest, setManifest] = useState(null)
@@ -170,6 +171,20 @@ function MaterialsPage() {
   const visibleEntries = currentEntries.filter((entry) =>
     entry.name.toLocaleLowerCase('sq').includes(query.toLocaleLowerCase('sq')),
   )
+
+  useEffect(() => {
+    if (!selectedPdf || !pdfPreviewRef.current) return undefined
+
+    const scrollTimeout = window.setTimeout(() => {
+      pdfPreviewRef.current?.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      })
+      pdfPreviewRef.current?.focus({ preventScroll: true })
+    }, 120)
+
+    return () => window.clearTimeout(scrollTimeout)
+  }, [selectedPdf])
 
   const openYear = (year) => {
     if (!year.available) return
@@ -438,9 +453,16 @@ function MaterialsPage() {
                         entry.type === 'folder'
                           ? Folder
                           : fileIcons[entry.extension] ?? File
+                      const isSelectedPdf =
+                        entry.type === 'file' &&
+                        selectedPdf?.path === entry.path
+
                       return (
                         <button
-                          className={`file-browser-row ${entry.type}`}
+                          aria-current={isSelectedPdf ? 'true' : undefined}
+                          className={`file-browser-row ${entry.type}${
+                            isSelectedPdf ? ' is-active' : ''
+                          }`}
                           key={entry.path}
                           onClick={() =>
                             entry.type === 'folder'
@@ -547,21 +569,38 @@ function MaterialsPage() {
                     className="material-preview-shell"
                     exit={{ opacity: 0, y: 12 }}
                     initial={{ opacity: 0, y: 18 }}
+                    key={selectedPdf.path}
+                    ref={pdfPreviewRef}
+                    tabIndex={-1}
                   >
                     <div className="material-preview-toolbar">
                       <div>
                         <span className="pdf-kicker">Pamja e PDF-së</span>
                         <h3>{selectedPdf.name}</h3>
                       </div>
-                      <div className="pdf-actions">
-                        <a href={selectedPdf.url} target="_blank" rel="noreferrer">
-                          <ExternalLink aria-hidden="true" size={17} />
-                          Hap
-                        </a>
-                        <a href={selectedPdf.url} download>
-                          <Download aria-hidden="true" size={17} />
-                          Shkarko
-                        </a>
+                      <div className="material-preview-controls">
+                        <div className="pdf-actions">
+                          <a
+                            href={selectedPdf.url}
+                            target="_blank"
+                            rel="noreferrer"
+                          >
+                            <ExternalLink aria-hidden="true" size={17} />
+                            Hap në tab
+                          </a>
+                          <a href={selectedPdf.url} download>
+                            <Download aria-hidden="true" size={17} />
+                            Shkarko
+                          </a>
+                        </div>
+                        <button
+                          aria-label="Mbyll PDF-në"
+                          className="topic-document-close"
+                          onClick={() => setSelectedPdf(null)}
+                          type="button"
+                        >
+                          <X aria-hidden="true" size={19} />
+                        </button>
                       </div>
                     </div>
                     <div className="pdf-viewer">

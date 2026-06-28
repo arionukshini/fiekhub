@@ -3,6 +3,7 @@ import {
   LayoutDashboard,
   LogIn,
   NotebookTabs,
+  Upload,
   UserCircle,
   UserPlus,
 } from 'lucide-react'
@@ -16,6 +17,7 @@ function TubelightNav({ isSignedIn, showAcceptanceExams = true }) {
         { name: 'Ballina', url: '/', icon: Home },
         { name: 'Paneli', url: '/dashboard', icon: LayoutDashboard },
         { name: 'Materialet', url: '/materials', icon: NotebookTabs },
+        { name: 'Dërgo', url: '/dergo-materiale', icon: Upload },
         ...(showAcceptanceExams
           ? [
               {
@@ -30,6 +32,7 @@ function TubelightNav({ isSignedIn, showAcceptanceExams = true }) {
     : [
         { name: 'Ballina', url: '/', icon: Home },
         { name: 'Kyçu', url: '/login', icon: LogIn },
+        { name: 'Dërgo', url: '/dergo-materiale', icon: Upload },
         { name: 'Regjistrohu', url: '/register', icon: UserPlus },
       ]
 
